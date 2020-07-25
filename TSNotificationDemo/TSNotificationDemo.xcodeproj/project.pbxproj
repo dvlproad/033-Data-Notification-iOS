@@ -1,0 +1,996 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		781BA9E824CC7F39002EB7FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BA9E724CC7F39002EB7FF /* AppDelegate.m */; };
+		781BA9EB24CC7F39002EB7FF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BA9EA24CC7F39002EB7FF /* SceneDelegate.m */; };
+		781BA9EE24CC7F39002EB7FF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BA9ED24CC7F39002EB7FF /* ViewController.m */; };
+		781BA9F124CC7F39002EB7FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 781BA9EF24CC7F39002EB7FF /* Main.storyboard */; };
+		781BA9F324CC7F3E002EB7FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 781BA9F224CC7F3E002EB7FF /* Assets.xcassets */; };
+		781BA9F624CC7F3E002EB7FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 781BA9F424CC7F3E002EB7FF /* LaunchScreen.storyboard */; };
+		781BA9F924CC7F3E002EB7FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BA9F824CC7F3E002EB7FF /* main.m */; };
+		781BAA0324CC7F3E002EB7FF /* TSNotificationDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA0224CC7F3E002EB7FF /* TSNotificationDemoTests.m */; };
+		781BAA0E24CC7F3E002EB7FF /* TSNotificationDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA0D24CC7F3E002EB7FF /* TSNotificationDemoUITests.m */; };
+		781BAA6824CC810A002EB7FF /* WholeDelegateHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA1D24CC810A002EB7FF /* WholeDelegateHomeViewController.m */; };
+		781BAA6924CC810A002EB7FF /* CJProtocolCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA2024CC810A002EB7FF /* CJProtocolCenter.m */; };
+		781BAA6A24CC810A002EB7FF /* TSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA2724CC810A002EB7FF /* TSUser.m */; };
+		781BAA6B24CC810A002EB7FF /* TSUserLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA2924CC810A002EB7FF /* TSUserLoginViewModel.m */; };
+		781BAA6C24CC810A002EB7FF /* TSUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA2B24CC810A002EB7FF /* TSUserManager.m */; };
+		781BAA6D24CC810A002EB7FF /* DelegateInRealAppHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA2C24CC810A002EB7FF /* DelegateInRealAppHomeViewController.m */; };
+		781BAA6E24CC810A002EB7FF /* OneToManyDelegateHashMediator31.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA2F24CC810A002EB7FF /* OneToManyDelegateHashMediator31.m */; };
+		781BAA6F24CC810A002EB7FF /* OneToManyDelegateHashViewController31.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA3224CC810A002EB7FF /* OneToManyDelegateHashViewController31.m */; };
+		781BAA7024CC810A002EB7FF /* OneToManyDelegateHashMediator33.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA3424CC810A002EB7FF /* OneToManyDelegateHashMediator33.m */; };
+		781BAA7124CC810A002EB7FF /* OneToManyDelegateHashViewController33.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA3724CC810A002EB7FF /* OneToManyDelegateHashViewController33.m */; };
+		781BAA7224CC810A002EB7FF /* OneToManyDelegateHashViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA3824CC810A002EB7FF /* OneToManyDelegateHashViewController1.m */; };
+		781BAA7324CC810A002EB7FF /* OneToManyDelegateArrayViewController33.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA3B24CC810A002EB7FF /* OneToManyDelegateArrayViewController33.m */; };
+		781BAA7424CC810A002EB7FF /* OneToManyDelegateArrayMediator33.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA3C24CC810A002EB7FF /* OneToManyDelegateArrayMediator33.m */; };
+		781BAA7524CC810A002EB7FF /* OneToManyDelegateArrayViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA3F24CC810A002EB7FF /* OneToManyDelegateArrayViewController1.m */; };
+		781BAA7624CC810A002EB7FF /* OneToManyDelegateArrayMediator31.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA4224CC810A002EB7FF /* OneToManyDelegateArrayMediator31.m */; };
+		781BAA7724CC810A002EB7FF /* OneToManyDelegateArrayViewController31.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA4324CC810A002EB7FF /* OneToManyDelegateArrayViewController31.m */; };
+		781BAA7824CC810A002EB7FF /* OneToManyDelegateArrayMediator32.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA4724CC810A002EB7FF /* OneToManyDelegateArrayMediator32.m */; };
+		781BAA7924CC810A002EB7FF /* OneToManyDelegateArrayViewController32.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA4824CC810A002EB7FF /* OneToManyDelegateArrayViewController32.m */; };
+		781BAA7A24CC810A002EB7FF /* DelegateReceivedViewModel2.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA4C24CC810A002EB7FF /* DelegateReceivedViewModel2.m */; };
+		781BAA7B24CC810A002EB7FF /* DelegateReceivedViewModel1.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA4D24CC810A002EB7FF /* DelegateReceivedViewModel1.m */; };
+		781BAA7C24CC810A002EB7FF /* OneToManyDelegateHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA4E24CC810A002EB7FF /* OneToManyDelegateHomeViewController.m */; };
+		781BAA7D24CC810A002EB7FF /* OneToManyDelegateViewController6.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA4F24CC810A002EB7FF /* OneToManyDelegateViewController6.m */; };
+		781BAA7E24CC810A002EB7FF /* TSNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA5024CC810A002EB7FF /* TSNotificationCenter.m */; };
+		781BAA7F24CC810A002EB7FF /* OneToManyDelegateNormalViewController21.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA5424CC810A002EB7FF /* OneToManyDelegateNormalViewController21.m */; };
+		781BAA8024CC810A002EB7FF /* OneToManyDelegateNormalViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA5524CC810A002EB7FF /* OneToManyDelegateNormalViewController1.m */; };
+		781BAA8124CC810A002EB7FF /* OneToManyDelegateNormalMediator21.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA5624CC810A002EB7FF /* OneToManyDelegateNormalMediator21.m */; };
+		781BAA8224CC810A002EB7FF /* DelegateHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA5B24CC810A002EB7FF /* DelegateHomeViewController.m */; };
+		781BAA8324CC810A002EB7FF /* ListenManyDelegateViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA5D24CC810A002EB7FF /* ListenManyDelegateViewController3.m */; };
+		781BAA8424CC810A002EB7FF /* ListenManyDelegateHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA5E24CC810A002EB7FF /* ListenManyDelegateHomeViewController.m */; };
+		781BAA8524CC810A002EB7FF /* DiffDelegateReceivedViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA6124CC810A002EB7FF /* DiffDelegateReceivedViewModel.m */; };
+		781BAA8624CC810A002EB7FF /* ListenManyDelegateViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA6724CC810A002EB7FF /* ListenManyDelegateViewController2.m */; };
+		781BAA8924CC8135002EB7FF /* UIWindow+RootSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA8824CC8135002EB7FF /* UIWindow+RootSetting.m */; };
+		B080339F84AEF1A22F3CFF8D /* libPods-TSNotificationDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F9FF619556388F77B8C34A6 /* libPods-TSNotificationDemo.a */; };
+		DFE86946ADC4605043616658 /* libPods-TSNotificationDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEA2B710A26D676946DCC6F /* libPods-TSNotificationDemoTests.a */; };
+		F6E1743D5FB340A5AD749BDA /* libPods-TSNotificationDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81735D053D9392DB27F31ED7 /* libPods-TSNotificationDemoUITests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		781BA9FF24CC7F3E002EB7FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 781BA9DB24CC7F39002EB7FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 781BA9E224CC7F39002EB7FF;
+			remoteInfo = TSNotificationDemo;
+		};
+		781BAA0A24CC7F3E002EB7FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 781BA9DB24CC7F39002EB7FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 781BA9E224CC7F39002EB7FF;
+			remoteInfo = TSNotificationDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06A5B0067B62F117E125A88E /* Pods-TSNotificationDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TSNotificationDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-TSNotificationDemoUITests/Pods-TSNotificationDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1C474A3DB24A29CC75E7C8F5 /* Pods-TSNotificationDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TSNotificationDemoTests.release.xcconfig"; path = "Target Support Files/Pods-TSNotificationDemoTests/Pods-TSNotificationDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		6F9FF619556388F77B8C34A6 /* libPods-TSNotificationDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TSNotificationDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		781BA9E324CC7F39002EB7FF /* TSNotificationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TSNotificationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		781BA9E624CC7F39002EB7FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		781BA9E724CC7F39002EB7FF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		781BA9E924CC7F39002EB7FF /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		781BA9EA24CC7F39002EB7FF /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		781BA9EC24CC7F39002EB7FF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		781BA9ED24CC7F39002EB7FF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		781BA9F024CC7F39002EB7FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		781BA9F224CC7F3E002EB7FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		781BA9F524CC7F3E002EB7FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		781BA9F724CC7F3E002EB7FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		781BA9F824CC7F3E002EB7FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		781BA9FE24CC7F3E002EB7FF /* TSNotificationDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TSNotificationDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		781BAA0224CC7F3E002EB7FF /* TSNotificationDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSNotificationDemoTests.m; sourceTree = "<group>"; };
+		781BAA0424CC7F3E002EB7FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		781BAA0924CC7F3E002EB7FF /* TSNotificationDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TSNotificationDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		781BAA0D24CC7F3E002EB7FF /* TSNotificationDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSNotificationDemoUITests.m; sourceTree = "<group>"; };
+		781BAA0F24CC7F3E002EB7FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		781BAA1D24CC810A002EB7FF /* WholeDelegateHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WholeDelegateHomeViewController.m; sourceTree = "<group>"; };
+		781BAA1F24CC810A002EB7FF /* CJProtocolCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJProtocolCenter.h; sourceTree = "<group>"; };
+		781BAA2024CC810A002EB7FF /* CJProtocolCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJProtocolCenter.m; sourceTree = "<group>"; };
+		781BAA2124CC810A002EB7FF /* WholeDelegateHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WholeDelegateHomeViewController.h; sourceTree = "<group>"; };
+		781BAA2224CC810A002EB7FF /* DelegateHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelegateHomeViewController.h; sourceTree = "<group>"; };
+		781BAA2424CC810A002EB7FF /* DelegateInRealAppHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelegateInRealAppHomeViewController.h; sourceTree = "<group>"; };
+		781BAA2624CC810A002EB7FF /* TSUserLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSUserLoginViewModel.h; sourceTree = "<group>"; };
+		781BAA2724CC810A002EB7FF /* TSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSUser.m; sourceTree = "<group>"; };
+		781BAA2824CC810A002EB7FF /* TSUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSUserManager.h; sourceTree = "<group>"; };
+		781BAA2924CC810A002EB7FF /* TSUserLoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSUserLoginViewModel.m; sourceTree = "<group>"; };
+		781BAA2A24CC810A002EB7FF /* TSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSUser.h; sourceTree = "<group>"; };
+		781BAA2B24CC810A002EB7FF /* TSUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSUserManager.m; sourceTree = "<group>"; };
+		781BAA2C24CC810A002EB7FF /* DelegateInRealAppHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelegateInRealAppHomeViewController.m; sourceTree = "<group>"; };
+		781BAA2F24CC810A002EB7FF /* OneToManyDelegateHashMediator31.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneToManyDelegateHashMediator31.m; sourceTree = "<group>"; };
+		781BAA3024CC810A002EB7FF /* OneToManyDelegateHashMediator33.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneToManyDelegateHashMediator33.h; sourceTree = "<group>"; };
+		781BAA3124CC810A002EB7FF /* OneToManyDelegateHashViewController33.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneToManyDelegateHashViewController33.h; sourceTree = "<group>"; };
+		781BAA3224CC810A002EB7FF /* OneToManyDelegateHashViewController31.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneToManyDelegateHashViewController31.m; sourceTree = "<group>"; };
+		781BAA3324CC810A002EB7FF /* OneToManyDelegateHashViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneToManyDelegateHashViewController1.h; sourceTree = "<group>"; };
+		781BAA3424CC810A002EB7FF /* OneToManyDelegateHashMediator33.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneToManyDelegateHashMediator33.m; sourceTree = "<group>"; };
+		781BAA3524CC810A002EB7FF /* OneToManyDelegateHashMediator31.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneToManyDelegateHashMediator31.h; sourceTree = "<group>"; };
+		781BAA3624CC810A002EB7FF /* OneToManyDelegateHashViewController31.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneToManyDelegateHashViewController31.h; sourceTree = "<group>"; };
+		781BAA3724CC810A002EB7FF /* OneToManyDelegateHashViewController33.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneToManyDelegateHashViewController33.m; sourceTree = "<group>"; };
+		781BAA3824CC810A002EB7FF /* OneToManyDelegateHashViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneToManyDelegateHashViewController1.m; sourceTree = "<group>"; };
+		781BAA3924CC810A002EB7FF /* TSDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDelegate.h; sourceTree = "<group>"; };
+		781BAA3B24CC810A002EB7FF /* OneToManyDelegateArrayViewController33.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneToManyDelegateArrayViewController33.m; sourceTree = "<group>"; };
+		781BAA3C24CC810A002EB7FF /* OneToManyDelegateArrayMediator33.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneToManyDelegateArrayMediator33.m; sourceTree = "<group>"; };
+		781BAA3D24CC810A002EB7FF /* OneToManyDelegateArrayViewController31.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneToManyDelegateArrayViewController31.h; sourceTree = "<group>"; };
+		781BAA3E24CC810A002EB7FF /* OneToManyDelegateArrayMediator31.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneToManyDelegateArrayMediator31.h; sourceTree = "<group>"; };
+		781BAA3F24CC810A002EB7FF /* OneToManyDelegateArrayViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneToManyDelegateArrayViewController1.m; sourceTree = "<group>"; };
+		781BAA4024CC810A002EB7FF /* OneToManyDelegateArrayViewController32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneToManyDelegateArrayViewController32.h; sourceTree = "<group>"; };
+		781BAA4124CC810A002EB7FF /* OneToManyDelegateArrayMediator32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneToManyDelegateArrayMediator32.h; sourceTree = "<group>"; };
+		781BAA4224CC810A002EB7FF /* OneToManyDelegateArrayMediator31.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneToManyDelegateArrayMediator31.m; sourceTree = "<group>"; };
+		781BAA4324CC810A002EB7FF /* OneToManyDelegateArrayViewController31.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneToManyDelegateArrayViewController31.m; sourceTree = "<group>"; };
+		781BAA4424CC810A002EB7FF /* OneToManyDelegateArrayMediator33.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneToManyDelegateArrayMediator33.h; sourceTree = "<group>"; };
+		781BAA4524CC810A002EB7FF /* OneToManyDelegateArrayViewController33.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneToManyDelegateArrayViewController33.h; sourceTree = "<group>"; };
+		781BAA4624CC810A002EB7FF /* OneToManyDelegateArrayViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneToManyDelegateArrayViewController1.h; sourceTree = "<group>"; };
+		781BAA4724CC810A002EB7FF /* OneToManyDelegateArrayMediator32.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneToManyDelegateArrayMediator32.m; sourceTree = "<group>"; };
+		781BAA4824CC810A002EB7FF /* OneToManyDelegateArrayViewController32.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneToManyDelegateArrayViewController32.m; sourceTree = "<group>"; };
+		781BAA4A24CC810A002EB7FF /* DelegateReceivedViewModel2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelegateReceivedViewModel2.h; sourceTree = "<group>"; };
+		781BAA4B24CC810A002EB7FF /* DelegateReceivedViewModel1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelegateReceivedViewModel1.h; sourceTree = "<group>"; };
+		781BAA4C24CC810A002EB7FF /* DelegateReceivedViewModel2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelegateReceivedViewModel2.m; sourceTree = "<group>"; };
+		781BAA4D24CC810A002EB7FF /* DelegateReceivedViewModel1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelegateReceivedViewModel1.m; sourceTree = "<group>"; };
+		781BAA4E24CC810A002EB7FF /* OneToManyDelegateHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneToManyDelegateHomeViewController.m; sourceTree = "<group>"; };
+		781BAA4F24CC810A002EB7FF /* OneToManyDelegateViewController6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneToManyDelegateViewController6.m; sourceTree = "<group>"; };
+		781BAA5024CC810A002EB7FF /* TSNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSNotificationCenter.m; sourceTree = "<group>"; };
+		781BAA5224CC810A002EB7FF /* OneToManyDelegateNormalMediator21.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneToManyDelegateNormalMediator21.h; sourceTree = "<group>"; };
+		781BAA5324CC810A002EB7FF /* OneToManyDelegateNormalViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneToManyDelegateNormalViewController1.h; sourceTree = "<group>"; };
+		781BAA5424CC810A002EB7FF /* OneToManyDelegateNormalViewController21.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneToManyDelegateNormalViewController21.m; sourceTree = "<group>"; };
+		781BAA5524CC810A002EB7FF /* OneToManyDelegateNormalViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneToManyDelegateNormalViewController1.m; sourceTree = "<group>"; };
+		781BAA5624CC810A002EB7FF /* OneToManyDelegateNormalMediator21.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneToManyDelegateNormalMediator21.m; sourceTree = "<group>"; };
+		781BAA5724CC810A002EB7FF /* OneToManyDelegateNormalViewController21.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneToManyDelegateNormalViewController21.h; sourceTree = "<group>"; };
+		781BAA5824CC810A002EB7FF /* OneToManyDelegateViewController6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneToManyDelegateViewController6.h; sourceTree = "<group>"; };
+		781BAA5924CC810A002EB7FF /* OneToManyDelegateHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneToManyDelegateHomeViewController.h; sourceTree = "<group>"; };
+		781BAA5A24CC810A002EB7FF /* TSNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSNotificationCenter.h; sourceTree = "<group>"; };
+		781BAA5B24CC810A002EB7FF /* DelegateHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelegateHomeViewController.m; sourceTree = "<group>"; };
+		781BAA5D24CC810A002EB7FF /* ListenManyDelegateViewController3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListenManyDelegateViewController3.m; sourceTree = "<group>"; };
+		781BAA5E24CC810A002EB7FF /* ListenManyDelegateHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListenManyDelegateHomeViewController.m; sourceTree = "<group>"; };
+		781BAA6024CC810A002EB7FF /* DiffDelegateReceivedViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiffDelegateReceivedViewModel.h; sourceTree = "<group>"; };
+		781BAA6124CC810A002EB7FF /* DiffDelegateReceivedViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiffDelegateReceivedViewModel.m; sourceTree = "<group>"; };
+		781BAA6224CC810A002EB7FF /* ListenManyDelegateViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListenManyDelegateViewController2.h; sourceTree = "<group>"; };
+		781BAA6324CC810A002EB7FF /* ListenManyDelegateViewController3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListenManyDelegateViewController3.h; sourceTree = "<group>"; };
+		781BAA6424CC810A002EB7FF /* TSUserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSUserDelegate.h; sourceTree = "<group>"; };
+		781BAA6524CC810A002EB7FF /* TSMessageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMessageDelegate.h; sourceTree = "<group>"; };
+		781BAA6624CC810A002EB7FF /* ListenManyDelegateHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListenManyDelegateHomeViewController.h; sourceTree = "<group>"; };
+		781BAA6724CC810A002EB7FF /* ListenManyDelegateViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListenManyDelegateViewController2.m; sourceTree = "<group>"; };
+		781BAA8724CC8135002EB7FF /* UIWindow+RootSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+RootSetting.h"; sourceTree = "<group>"; };
+		781BAA8824CC8135002EB7FF /* UIWindow+RootSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+RootSetting.m"; sourceTree = "<group>"; };
+		81735D053D9392DB27F31ED7 /* libPods-TSNotificationDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TSNotificationDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EEA2B710A26D676946DCC6F /* libPods-TSNotificationDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TSNotificationDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		90162924BB5290C2C1E73FC4 /* Pods-TSNotificationDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TSNotificationDemo.release.xcconfig"; path = "Target Support Files/Pods-TSNotificationDemo/Pods-TSNotificationDemo.release.xcconfig"; sourceTree = "<group>"; };
+		B741BBF6F028CF40D7CB00EA /* Pods-TSNotificationDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TSNotificationDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-TSNotificationDemoUITests/Pods-TSNotificationDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CA1F60303990870EB835FABE /* Pods-TSNotificationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TSNotificationDemo.debug.xcconfig"; path = "Target Support Files/Pods-TSNotificationDemo/Pods-TSNotificationDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		D90794634226BF4A18BE236E /* Pods-TSNotificationDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TSNotificationDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-TSNotificationDemoTests/Pods-TSNotificationDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		781BA9E024CC7F39002EB7FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B080339F84AEF1A22F3CFF8D /* libPods-TSNotificationDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		781BA9FB24CC7F3E002EB7FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFE86946ADC4605043616658 /* libPods-TSNotificationDemoTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		781BAA0624CC7F3E002EB7FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6E1743D5FB340A5AD749BDA /* libPods-TSNotificationDemoUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6803A9868BFCA8533A6E2B82 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F9FF619556388F77B8C34A6 /* libPods-TSNotificationDemo.a */,
+				8EEA2B710A26D676946DCC6F /* libPods-TSNotificationDemoTests.a */,
+				81735D053D9392DB27F31ED7 /* libPods-TSNotificationDemoUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		781BA9DA24CC7F39002EB7FF = {
+			isa = PBXGroup;
+			children = (
+				781BA9E524CC7F39002EB7FF /* TSNotificationDemo */,
+				781BAA0124CC7F3E002EB7FF /* TSNotificationDemoTests */,
+				781BAA0C24CC7F3E002EB7FF /* TSNotificationDemoUITests */,
+				781BA9E424CC7F39002EB7FF /* Products */,
+				A3F345E04C70B8DC6AF840D3 /* Pods */,
+				6803A9868BFCA8533A6E2B82 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		781BA9E424CC7F39002EB7FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				781BA9E324CC7F39002EB7FF /* TSNotificationDemo.app */,
+				781BA9FE24CC7F3E002EB7FF /* TSNotificationDemoTests.xctest */,
+				781BAA0924CC7F3E002EB7FF /* TSNotificationDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		781BA9E524CC7F39002EB7FF /* TSNotificationDemo */ = {
+			isa = PBXGroup;
+			children = (
+				781BA9E624CC7F39002EB7FF /* AppDelegate.h */,
+				781BA9E724CC7F39002EB7FF /* AppDelegate.m */,
+				781BA9E924CC7F39002EB7FF /* SceneDelegate.h */,
+				781BA9EA24CC7F39002EB7FF /* SceneDelegate.m */,
+				781BAA8724CC8135002EB7FF /* UIWindow+RootSetting.h */,
+				781BAA8824CC8135002EB7FF /* UIWindow+RootSetting.m */,
+				781BAA1B24CC810A002EB7FF /* DelegateDemo */,
+				781BA9EC24CC7F39002EB7FF /* ViewController.h */,
+				781BA9ED24CC7F39002EB7FF /* ViewController.m */,
+				781BA9EF24CC7F39002EB7FF /* Main.storyboard */,
+				781BA9F224CC7F3E002EB7FF /* Assets.xcassets */,
+				781BA9F424CC7F3E002EB7FF /* LaunchScreen.storyboard */,
+				781BA9F724CC7F3E002EB7FF /* Info.plist */,
+				781BA9F824CC7F3E002EB7FF /* main.m */,
+			);
+			path = TSNotificationDemo;
+			sourceTree = "<group>";
+		};
+		781BAA0124CC7F3E002EB7FF /* TSNotificationDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				781BAA0224CC7F3E002EB7FF /* TSNotificationDemoTests.m */,
+				781BAA0424CC7F3E002EB7FF /* Info.plist */,
+			);
+			path = TSNotificationDemoTests;
+			sourceTree = "<group>";
+		};
+		781BAA0C24CC7F3E002EB7FF /* TSNotificationDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				781BAA0D24CC7F3E002EB7FF /* TSNotificationDemoUITests.m */,
+				781BAA0F24CC7F3E002EB7FF /* Info.plist */,
+			);
+			path = TSNotificationDemoUITests;
+			sourceTree = "<group>";
+		};
+		781BAA1B24CC810A002EB7FF /* DelegateDemo */ = {
+			isa = PBXGroup;
+			children = (
+				781BAA2224CC810A002EB7FF /* DelegateHomeViewController.h */,
+				781BAA5B24CC810A002EB7FF /* DelegateHomeViewController.m */,
+				781BAA2324CC810A002EB7FF /* DelegateInRealAppDemo */,
+				781BAA5C24CC810A002EB7FF /* ListenManyDelegateDemo */,
+				781BAA2D24CC810A002EB7FF /* OneToManyDelegateDemo */,
+				781BAA1C24CC810A002EB7FF /* WholeDelegateDemo */,
+			);
+			path = DelegateDemo;
+			sourceTree = "<group>";
+		};
+		781BAA1C24CC810A002EB7FF /* WholeDelegateDemo */ = {
+			isa = PBXGroup;
+			children = (
+				781BAA1D24CC810A002EB7FF /* WholeDelegateHomeViewController.m */,
+				781BAA1E24CC810A002EB7FF /* CJProtocolCenter */,
+				781BAA2124CC810A002EB7FF /* WholeDelegateHomeViewController.h */,
+			);
+			path = WholeDelegateDemo;
+			sourceTree = "<group>";
+		};
+		781BAA1E24CC810A002EB7FF /* CJProtocolCenter */ = {
+			isa = PBXGroup;
+			children = (
+				781BAA1F24CC810A002EB7FF /* CJProtocolCenter.h */,
+				781BAA2024CC810A002EB7FF /* CJProtocolCenter.m */,
+			);
+			path = CJProtocolCenter;
+			sourceTree = "<group>";
+		};
+		781BAA2324CC810A002EB7FF /* DelegateInRealAppDemo */ = {
+			isa = PBXGroup;
+			children = (
+				781BAA2424CC810A002EB7FF /* DelegateInRealAppHomeViewController.h */,
+				781BAA2524CC810A002EB7FF /* User */,
+				781BAA2C24CC810A002EB7FF /* DelegateInRealAppHomeViewController.m */,
+			);
+			path = DelegateInRealAppDemo;
+			sourceTree = "<group>";
+		};
+		781BAA2524CC810A002EB7FF /* User */ = {
+			isa = PBXGroup;
+			children = (
+				781BAA2624CC810A002EB7FF /* TSUserLoginViewModel.h */,
+				781BAA2724CC810A002EB7FF /* TSUser.m */,
+				781BAA2824CC810A002EB7FF /* TSUserManager.h */,
+				781BAA2924CC810A002EB7FF /* TSUserLoginViewModel.m */,
+				781BAA2A24CC810A002EB7FF /* TSUser.h */,
+				781BAA2B24CC810A002EB7FF /* TSUserManager.m */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		781BAA2D24CC810A002EB7FF /* OneToManyDelegateDemo */ = {
+			isa = PBXGroup;
+			children = (
+				781BAA2E24CC810A002EB7FF /* Hash */,
+				781BAA3924CC810A002EB7FF /* TSDelegate.h */,
+				781BAA3A24CC810A002EB7FF /* Array */,
+				781BAA4924CC810A002EB7FF /* DelegateReceiver */,
+				781BAA4E24CC810A002EB7FF /* OneToManyDelegateHomeViewController.m */,
+				781BAA4F24CC810A002EB7FF /* OneToManyDelegateViewController6.m */,
+				781BAA5024CC810A002EB7FF /* TSNotificationCenter.m */,
+				781BAA5124CC810A002EB7FF /* Normal */,
+				781BAA5824CC810A002EB7FF /* OneToManyDelegateViewController6.h */,
+				781BAA5924CC810A002EB7FF /* OneToManyDelegateHomeViewController.h */,
+				781BAA5A24CC810A002EB7FF /* TSNotificationCenter.h */,
+			);
+			path = OneToManyDelegateDemo;
+			sourceTree = "<group>";
+		};
+		781BAA2E24CC810A002EB7FF /* Hash */ = {
+			isa = PBXGroup;
+			children = (
+				781BAA2F24CC810A002EB7FF /* OneToManyDelegateHashMediator31.m */,
+				781BAA3024CC810A002EB7FF /* OneToManyDelegateHashMediator33.h */,
+				781BAA3124CC810A002EB7FF /* OneToManyDelegateHashViewController33.h */,
+				781BAA3224CC810A002EB7FF /* OneToManyDelegateHashViewController31.m */,
+				781BAA3324CC810A002EB7FF /* OneToManyDelegateHashViewController1.h */,
+				781BAA3424CC810A002EB7FF /* OneToManyDelegateHashMediator33.m */,
+				781BAA3524CC810A002EB7FF /* OneToManyDelegateHashMediator31.h */,
+				781BAA3624CC810A002EB7FF /* OneToManyDelegateHashViewController31.h */,
+				781BAA3724CC810A002EB7FF /* OneToManyDelegateHashViewController33.m */,
+				781BAA3824CC810A002EB7FF /* OneToManyDelegateHashViewController1.m */,
+			);
+			path = Hash;
+			sourceTree = "<group>";
+		};
+		781BAA3A24CC810A002EB7FF /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				781BAA3B24CC810A002EB7FF /* OneToManyDelegateArrayViewController33.m */,
+				781BAA3C24CC810A002EB7FF /* OneToManyDelegateArrayMediator33.m */,
+				781BAA3D24CC810A002EB7FF /* OneToManyDelegateArrayViewController31.h */,
+				781BAA3E24CC810A002EB7FF /* OneToManyDelegateArrayMediator31.h */,
+				781BAA3F24CC810A002EB7FF /* OneToManyDelegateArrayViewController1.m */,
+				781BAA4024CC810A002EB7FF /* OneToManyDelegateArrayViewController32.h */,
+				781BAA4124CC810A002EB7FF /* OneToManyDelegateArrayMediator32.h */,
+				781BAA4224CC810A002EB7FF /* OneToManyDelegateArrayMediator31.m */,
+				781BAA4324CC810A002EB7FF /* OneToManyDelegateArrayViewController31.m */,
+				781BAA4424CC810A002EB7FF /* OneToManyDelegateArrayMediator33.h */,
+				781BAA4524CC810A002EB7FF /* OneToManyDelegateArrayViewController33.h */,
+				781BAA4624CC810A002EB7FF /* OneToManyDelegateArrayViewController1.h */,
+				781BAA4724CC810A002EB7FF /* OneToManyDelegateArrayMediator32.m */,
+				781BAA4824CC810A002EB7FF /* OneToManyDelegateArrayViewController32.m */,
+			);
+			path = Array;
+			sourceTree = "<group>";
+		};
+		781BAA4924CC810A002EB7FF /* DelegateReceiver */ = {
+			isa = PBXGroup;
+			children = (
+				781BAA4A24CC810A002EB7FF /* DelegateReceivedViewModel2.h */,
+				781BAA4B24CC810A002EB7FF /* DelegateReceivedViewModel1.h */,
+				781BAA4C24CC810A002EB7FF /* DelegateReceivedViewModel2.m */,
+				781BAA4D24CC810A002EB7FF /* DelegateReceivedViewModel1.m */,
+			);
+			path = DelegateReceiver;
+			sourceTree = "<group>";
+		};
+		781BAA5124CC810A002EB7FF /* Normal */ = {
+			isa = PBXGroup;
+			children = (
+				781BAA5224CC810A002EB7FF /* OneToManyDelegateNormalMediator21.h */,
+				781BAA5324CC810A002EB7FF /* OneToManyDelegateNormalViewController1.h */,
+				781BAA5424CC810A002EB7FF /* OneToManyDelegateNormalViewController21.m */,
+				781BAA5524CC810A002EB7FF /* OneToManyDelegateNormalViewController1.m */,
+				781BAA5624CC810A002EB7FF /* OneToManyDelegateNormalMediator21.m */,
+				781BAA5724CC810A002EB7FF /* OneToManyDelegateNormalViewController21.h */,
+			);
+			path = Normal;
+			sourceTree = "<group>";
+		};
+		781BAA5C24CC810A002EB7FF /* ListenManyDelegateDemo */ = {
+			isa = PBXGroup;
+			children = (
+				781BAA5D24CC810A002EB7FF /* ListenManyDelegateViewController3.m */,
+				781BAA5E24CC810A002EB7FF /* ListenManyDelegateHomeViewController.m */,
+				781BAA5F24CC810A002EB7FF /* DelegateReceiver */,
+				781BAA6224CC810A002EB7FF /* ListenManyDelegateViewController2.h */,
+				781BAA6324CC810A002EB7FF /* ListenManyDelegateViewController3.h */,
+				781BAA6424CC810A002EB7FF /* TSUserDelegate.h */,
+				781BAA6524CC810A002EB7FF /* TSMessageDelegate.h */,
+				781BAA6624CC810A002EB7FF /* ListenManyDelegateHomeViewController.h */,
+				781BAA6724CC810A002EB7FF /* ListenManyDelegateViewController2.m */,
+			);
+			path = ListenManyDelegateDemo;
+			sourceTree = "<group>";
+		};
+		781BAA5F24CC810A002EB7FF /* DelegateReceiver */ = {
+			isa = PBXGroup;
+			children = (
+				781BAA6024CC810A002EB7FF /* DiffDelegateReceivedViewModel.h */,
+				781BAA6124CC810A002EB7FF /* DiffDelegateReceivedViewModel.m */,
+			);
+			path = DelegateReceiver;
+			sourceTree = "<group>";
+		};
+		A3F345E04C70B8DC6AF840D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA1F60303990870EB835FABE /* Pods-TSNotificationDemo.debug.xcconfig */,
+				90162924BB5290C2C1E73FC4 /* Pods-TSNotificationDemo.release.xcconfig */,
+				D90794634226BF4A18BE236E /* Pods-TSNotificationDemoTests.debug.xcconfig */,
+				1C474A3DB24A29CC75E7C8F5 /* Pods-TSNotificationDemoTests.release.xcconfig */,
+				B741BBF6F028CF40D7CB00EA /* Pods-TSNotificationDemoUITests.debug.xcconfig */,
+				06A5B0067B62F117E125A88E /* Pods-TSNotificationDemoUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		781BA9E224CC7F39002EB7FF /* TSNotificationDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 781BAA1224CC7F3E002EB7FF /* Build configuration list for PBXNativeTarget "TSNotificationDemo" */;
+			buildPhases = (
+				2580C1EA64BFADBECF09ED4E /* [CP] Check Pods Manifest.lock */,
+				781BA9DF24CC7F39002EB7FF /* Sources */,
+				781BA9E024CC7F39002EB7FF /* Frameworks */,
+				781BA9E124CC7F39002EB7FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TSNotificationDemo;
+			productName = TSNotificationDemo;
+			productReference = 781BA9E324CC7F39002EB7FF /* TSNotificationDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		781BA9FD24CC7F3E002EB7FF /* TSNotificationDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 781BAA1524CC7F3E002EB7FF /* Build configuration list for PBXNativeTarget "TSNotificationDemoTests" */;
+			buildPhases = (
+				9D22633EB9CA64E381686CFA /* [CP] Check Pods Manifest.lock */,
+				781BA9FA24CC7F3E002EB7FF /* Sources */,
+				781BA9FB24CC7F3E002EB7FF /* Frameworks */,
+				781BA9FC24CC7F3E002EB7FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				781BAA0024CC7F3E002EB7FF /* PBXTargetDependency */,
+			);
+			name = TSNotificationDemoTests;
+			productName = TSNotificationDemoTests;
+			productReference = 781BA9FE24CC7F3E002EB7FF /* TSNotificationDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		781BAA0824CC7F3E002EB7FF /* TSNotificationDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 781BAA1824CC7F3E002EB7FF /* Build configuration list for PBXNativeTarget "TSNotificationDemoUITests" */;
+			buildPhases = (
+				95064C86DA69C2AEDABD395D /* [CP] Check Pods Manifest.lock */,
+				781BAA0524CC7F3E002EB7FF /* Sources */,
+				781BAA0624CC7F3E002EB7FF /* Frameworks */,
+				781BAA0724CC7F3E002EB7FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				781BAA0B24CC7F3E002EB7FF /* PBXTargetDependency */,
+			);
+			name = TSNotificationDemoUITests;
+			productName = TSNotificationDemoUITests;
+			productReference = 781BAA0924CC7F3E002EB7FF /* TSNotificationDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		781BA9DB24CC7F39002EB7FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = dvlproad;
+				TargetAttributes = {
+					781BA9E224CC7F39002EB7FF = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					781BA9FD24CC7F3E002EB7FF = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 781BA9E224CC7F39002EB7FF;
+					};
+					781BAA0824CC7F3E002EB7FF = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 781BA9E224CC7F39002EB7FF;
+					};
+				};
+			};
+			buildConfigurationList = 781BA9DE24CC7F39002EB7FF /* Build configuration list for PBXProject "TSNotificationDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 781BA9DA24CC7F39002EB7FF;
+			productRefGroup = 781BA9E424CC7F39002EB7FF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				781BA9E224CC7F39002EB7FF /* TSNotificationDemo */,
+				781BA9FD24CC7F3E002EB7FF /* TSNotificationDemoTests */,
+				781BAA0824CC7F3E002EB7FF /* TSNotificationDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		781BA9E124CC7F39002EB7FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				781BA9F624CC7F3E002EB7FF /* LaunchScreen.storyboard in Resources */,
+				781BA9F324CC7F3E002EB7FF /* Assets.xcassets in Resources */,
+				781BA9F124CC7F39002EB7FF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		781BA9FC24CC7F3E002EB7FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		781BAA0724CC7F3E002EB7FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2580C1EA64BFADBECF09ED4E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TSNotificationDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95064C86DA69C2AEDABD395D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TSNotificationDemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D22633EB9CA64E381686CFA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TSNotificationDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		781BA9DF24CC7F39002EB7FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				781BA9EE24CC7F39002EB7FF /* ViewController.m in Sources */,
+				781BAA8524CC810A002EB7FF /* DiffDelegateReceivedViewModel.m in Sources */,
+				781BAA6E24CC810A002EB7FF /* OneToManyDelegateHashMediator31.m in Sources */,
+				781BAA8424CC810A002EB7FF /* ListenManyDelegateHomeViewController.m in Sources */,
+				781BAA7224CC810A002EB7FF /* OneToManyDelegateHashViewController1.m in Sources */,
+				781BAA7924CC810A002EB7FF /* OneToManyDelegateArrayViewController32.m in Sources */,
+				781BAA6F24CC810A002EB7FF /* OneToManyDelegateHashViewController31.m in Sources */,
+				781BAA7524CC810A002EB7FF /* OneToManyDelegateArrayViewController1.m in Sources */,
+				781BAA8024CC810A002EB7FF /* OneToManyDelegateNormalViewController1.m in Sources */,
+				781BAA8324CC810A002EB7FF /* ListenManyDelegateViewController3.m in Sources */,
+				781BAA7C24CC810A002EB7FF /* OneToManyDelegateHomeViewController.m in Sources */,
+				781BAA7B24CC810A002EB7FF /* DelegateReceivedViewModel1.m in Sources */,
+				781BAA8924CC8135002EB7FF /* UIWindow+RootSetting.m in Sources */,
+				781BAA6824CC810A002EB7FF /* WholeDelegateHomeViewController.m in Sources */,
+				781BAA6C24CC810A002EB7FF /* TSUserManager.m in Sources */,
+				781BAA7E24CC810A002EB7FF /* TSNotificationCenter.m in Sources */,
+				781BAA7A24CC810A002EB7FF /* DelegateReceivedViewModel2.m in Sources */,
+				781BA9E824CC7F39002EB7FF /* AppDelegate.m in Sources */,
+				781BAA6924CC810A002EB7FF /* CJProtocolCenter.m in Sources */,
+				781BAA6D24CC810A002EB7FF /* DelegateInRealAppHomeViewController.m in Sources */,
+				781BAA7424CC810A002EB7FF /* OneToManyDelegateArrayMediator33.m in Sources */,
+				781BAA7D24CC810A002EB7FF /* OneToManyDelegateViewController6.m in Sources */,
+				781BAA7624CC810A002EB7FF /* OneToManyDelegateArrayMediator31.m in Sources */,
+				781BAA8624CC810A002EB7FF /* ListenManyDelegateViewController2.m in Sources */,
+				781BAA6B24CC810A002EB7FF /* TSUserLoginViewModel.m in Sources */,
+				781BAA6A24CC810A002EB7FF /* TSUser.m in Sources */,
+				781BAA7F24CC810A002EB7FF /* OneToManyDelegateNormalViewController21.m in Sources */,
+				781BAA7724CC810A002EB7FF /* OneToManyDelegateArrayViewController31.m in Sources */,
+				781BAA7124CC810A002EB7FF /* OneToManyDelegateHashViewController33.m in Sources */,
+				781BAA7824CC810A002EB7FF /* OneToManyDelegateArrayMediator32.m in Sources */,
+				781BAA8224CC810A002EB7FF /* DelegateHomeViewController.m in Sources */,
+				781BAA7324CC810A002EB7FF /* OneToManyDelegateArrayViewController33.m in Sources */,
+				781BAA8124CC810A002EB7FF /* OneToManyDelegateNormalMediator21.m in Sources */,
+				781BA9F924CC7F3E002EB7FF /* main.m in Sources */,
+				781BA9EB24CC7F39002EB7FF /* SceneDelegate.m in Sources */,
+				781BAA7024CC810A002EB7FF /* OneToManyDelegateHashMediator33.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		781BA9FA24CC7F3E002EB7FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				781BAA0324CC7F3E002EB7FF /* TSNotificationDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		781BAA0524CC7F3E002EB7FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				781BAA0E24CC7F3E002EB7FF /* TSNotificationDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		781BAA0024CC7F3E002EB7FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 781BA9E224CC7F39002EB7FF /* TSNotificationDemo */;
+			targetProxy = 781BA9FF24CC7F3E002EB7FF /* PBXContainerItemProxy */;
+		};
+		781BAA0B24CC7F3E002EB7FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 781BA9E224CC7F39002EB7FF /* TSNotificationDemo */;
+			targetProxy = 781BAA0A24CC7F3E002EB7FF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		781BA9EF24CC7F39002EB7FF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				781BA9F024CC7F39002EB7FF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		781BA9F424CC7F3E002EB7FF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				781BA9F524CC7F3E002EB7FF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		781BAA1024CC7F3E002EB7FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		781BAA1124CC7F3E002EB7FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		781BAA1324CC7F3E002EB7FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA1F60303990870EB835FABE /* Pods-TSNotificationDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TSNotificationDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.TSNotificationDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		781BAA1424CC7F3E002EB7FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90162924BB5290C2C1E73FC4 /* Pods-TSNotificationDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TSNotificationDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.TSNotificationDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		781BAA1624CC7F3E002EB7FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D90794634226BF4A18BE236E /* Pods-TSNotificationDemoTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TSNotificationDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.TSNotificationDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TSNotificationDemo.app/TSNotificationDemo";
+			};
+			name = Debug;
+		};
+		781BAA1724CC7F3E002EB7FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C474A3DB24A29CC75E7C8F5 /* Pods-TSNotificationDemoTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TSNotificationDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.TSNotificationDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TSNotificationDemo.app/TSNotificationDemo";
+			};
+			name = Release;
+		};
+		781BAA1924CC7F3E002EB7FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B741BBF6F028CF40D7CB00EA /* Pods-TSNotificationDemoUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TSNotificationDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.TSNotificationDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TSNotificationDemo;
+			};
+			name = Debug;
+		};
+		781BAA1A24CC7F3E002EB7FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06A5B0067B62F117E125A88E /* Pods-TSNotificationDemoUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TSNotificationDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.TSNotificationDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TSNotificationDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		781BA9DE24CC7F39002EB7FF /* Build configuration list for PBXProject "TSNotificationDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				781BAA1024CC7F3E002EB7FF /* Debug */,
+				781BAA1124CC7F3E002EB7FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		781BAA1224CC7F3E002EB7FF /* Build configuration list for PBXNativeTarget "TSNotificationDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				781BAA1324CC7F3E002EB7FF /* Debug */,
+				781BAA1424CC7F3E002EB7FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		781BAA1524CC7F3E002EB7FF /* Build configuration list for PBXNativeTarget "TSNotificationDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				781BAA1624CC7F3E002EB7FF /* Debug */,
+				781BAA1724CC7F3E002EB7FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		781BAA1824CC7F3E002EB7FF /* Build configuration list for PBXNativeTarget "TSNotificationDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				781BAA1924CC7F3E002EB7FF /* Debug */,
+				781BAA1A24CC7F3E002EB7FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 781BA9DB24CC7F39002EB7FF /* Project object */;
+}
