@@ -13,7 +13,10 @@
 #import "WholeDelegateHomeViewController.h"
 #import "DelegateInRealAppHomeViewController.h"
 
-@interface DelegateHomeViewController () {
+#import "TSUserLoginViewModel.h"
+#import "TSUserManager.h"
+
+@interface DelegateHomeViewController () <TSDelegate, TSUserDelegate> {
     
 }
 
@@ -21,11 +24,26 @@
 
 @implementation DelegateHomeViewController
 
+#pragma mark - TSDelegate
+- (void)delegate_didUpdateLoginState:(BOOL)loginState {
+    NSLog(@"vm登录状态发生变化，您已%@", loginState ? @"登录" : @"登出");
+}
+
+
+#pragma mark - TSUserDelegate
+- (void)userDelegate_didUpdateLoginState:(BOOL)loginState {
+    NSLog(@"manager登录状态发生变化，您已%@", loginState ? @"登录" : @"登出");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
     self.navigationItem.title = NSLocalizedString(@"同一协议给多个监听者", nil);
+    
+    [[CJProtocolCenter defaultCenter] addListener:self forProtocol:@protocol(TSDelegate)];
+    [[CJProtocolCenter defaultCenter] addListener:self forProtocol:@protocol(TSUserDelegate)];
+    
     
     NSMutableArray *sectionDataModels = [[NSMutableArray alloc] init];
     
