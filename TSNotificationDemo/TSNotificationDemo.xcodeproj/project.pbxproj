@@ -282,9 +282,9 @@
 		781BAA1C24CC810A002EB7FF /* WholeDelegateDemo */ = {
 			isa = PBXGroup;
 			children = (
-				781BAA1D24CC810A002EB7FF /* WholeDelegateHomeViewController.m */,
 				781BAA1E24CC810A002EB7FF /* CJProtocolCenter */,
 				781BAA2124CC810A002EB7FF /* WholeDelegateHomeViewController.h */,
+				781BAA1D24CC810A002EB7FF /* WholeDelegateHomeViewController.m */,
 			);
 			path = WholeDelegateDemo;
 			sourceTree = "<group>";
@@ -324,17 +324,17 @@
 		781BAA2D24CC810A002EB7FF /* OneToManyDelegateDemo */ = {
 			isa = PBXGroup;
 			children = (
-				781BAA2E24CC810A002EB7FF /* Hash */,
-				781BAA3924CC810A002EB7FF /* TSDelegate.h */,
 				781BAA3A24CC810A002EB7FF /* Array */,
 				781BAA4924CC810A002EB7FF /* DelegateReceiver */,
-				781BAA4E24CC810A002EB7FF /* OneToManyDelegateHomeViewController.m */,
-				781BAA4F24CC810A002EB7FF /* OneToManyDelegateViewController6.m */,
-				781BAA5024CC810A002EB7FF /* TSNotificationCenter.m */,
+				781BAA2E24CC810A002EB7FF /* Hash */,
 				781BAA5124CC810A002EB7FF /* Normal */,
-				781BAA5824CC810A002EB7FF /* OneToManyDelegateViewController6.h */,
 				781BAA5924CC810A002EB7FF /* OneToManyDelegateHomeViewController.h */,
+				781BAA4E24CC810A002EB7FF /* OneToManyDelegateHomeViewController.m */,
+				781BAA5824CC810A002EB7FF /* OneToManyDelegateViewController6.h */,
+				781BAA4F24CC810A002EB7FF /* OneToManyDelegateViewController6.m */,
+				781BAA3924CC810A002EB7FF /* TSDelegate.h */,
 				781BAA5A24CC810A002EB7FF /* TSNotificationCenter.h */,
+				781BAA5024CC810A002EB7FF /* TSNotificationCenter.m */,
 			);
 			path = OneToManyDelegateDemo;
 			sourceTree = "<group>";
