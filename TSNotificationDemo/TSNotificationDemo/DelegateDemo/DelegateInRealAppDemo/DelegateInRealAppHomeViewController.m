@@ -26,10 +26,10 @@
     
     // 多代理-UserManager
     {
-        CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
         sectionDataModel.theme = @"manager用户登录/登出";
         {
-            CJModuleModel *loginModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *loginModule = [[CQDMModuleModel alloc] init];
             loginModule.title = @"manger执行登录操作，发送登录状态变化";
             loginModule.actionBlock = ^{
                 //NSDictionary *userDictionary = @{@"uid": @"111"};
@@ -39,7 +39,7 @@
             [sectionDataModel.values addObject:loginModule];
         }
         {
-            CJModuleModel *loginModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *loginModule = [[CQDMModuleModel alloc] init];
             loginModule.title = @"manager执行退出操作，发送登录状态变化";
             loginModule.actionBlock = ^{
                 //NSDictionary *userDictionary = nil;

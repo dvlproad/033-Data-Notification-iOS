@@ -37,10 +37,10 @@
     
     // 多代理-ViewModel
     {
-        CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
         sectionDataModel.theme = @"(接收者收)不同协议给同一监听者/同时监听不同协议";
         {
-            CJModuleModel *loginModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *loginModule = [[CQDMModuleModel alloc] init];
             loginModule.title = @"ListenManyDelegateViewController2";
             loginModule.actionBlock = ^{
                 OneToManyDelegateHashMediator33 *delegateMediator = [[OneToManyDelegateHashMediator33 alloc] init];
@@ -54,7 +54,7 @@
             [sectionDataModel.values addObject:loginModule];
         }
         {
-            CJModuleModel *loginModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *loginModule = [[CQDMModuleModel alloc] init];
             loginModule.title = @"(接收者收)不同协议给同一监听者/同时监听不同协议";
             loginModule.actionBlock = ^{
                 [[TSNotificationCenter defaultCenter] addDelegate:self.diffDelegateReceiver

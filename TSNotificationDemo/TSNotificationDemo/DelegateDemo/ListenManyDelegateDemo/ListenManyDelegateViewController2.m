@@ -29,10 +29,10 @@
     
     // 多代理-delegate
     {
-        CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
         sectionDataModel.theme = @"执行delegate(未封装)";
         {
-            CJModuleModel *loginModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *loginModule = [[CQDMModuleModel alloc] init];
             loginModule.title = @"执行userDelegate的登录操作，发送登录状态变化";
             loginModule.actionBlock = ^{
                 SEL selector = @selector(userDelegate_didUpdateLoginState:);
@@ -45,7 +45,7 @@
             [sectionDataModel.values addObject:loginModule];
         }
         {
-            CJModuleModel *loginModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *loginModule = [[CQDMModuleModel alloc] init];
             loginModule.title = @"执行messageDelegate的更新操作，发送信息状态变化";
             loginModule.actionBlock = ^{
                 SEL selector = @selector(messageDelegate_didUpdateMessageState:);
@@ -62,10 +62,10 @@
     
     // 多代理-delegate
     {
-        CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
         sectionDataModel.theme = @"执行delegate(初步封装)";
         {
-            CJModuleModel *loginModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *loginModule = [[CQDMModuleModel alloc] init];
             loginModule.title = @"执行userDelegate的登录操作，发送登录状态变化";
             loginModule.actionBlock = ^{
                 [self __broadcastProtocol:@protocol(TSUserDelegate)
@@ -77,7 +77,7 @@
             [sectionDataModel.values addObject:loginModule];
         }
         {
-            CJModuleModel *loginModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *loginModule = [[CQDMModuleModel alloc] init];
             loginModule.title = @"执行messageDelegate的更新操作，发送信息状态变化";
             loginModule.actionBlock = ^{
                 [self __broadcastProtocol:@protocol(TSMessageDelegate)
@@ -94,10 +94,10 @@
     
     // 多代理-delegate
     {
-        CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
         sectionDataModel.theme = @"执行delegate(正式封装)";
         {
-            CJModuleModel *loginModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *loginModule = [[CQDMModuleModel alloc] init];
             loginModule.title = @"执行userDelegate的登录操作，发送登录状态变化";
             loginModule.actionBlock = ^{
                 [self.delegateMediator broadcastProtocol:@protocol(TSUserDelegate)
@@ -109,7 +109,7 @@
             [sectionDataModel.values addObject:loginModule];
         }
         {
-            CJModuleModel *loginModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *loginModule = [[CQDMModuleModel alloc] init];
             loginModule.title = @"执行messageDelegate的更新操作，发送信息状态变化";
             loginModule.actionBlock = ^{
                 [self.delegateMediator broadcastProtocol:@protocol(TSMessageDelegate)

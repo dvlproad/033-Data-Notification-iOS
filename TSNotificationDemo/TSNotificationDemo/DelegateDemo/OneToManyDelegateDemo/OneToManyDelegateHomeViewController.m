@@ -58,10 +58,10 @@
     
     // 多代理-Delegate
     {
-        CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
         sectionDataModel.theme = @"OneToManyDelegate";
         {
-            CJModuleModel *loginModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *loginModule = [[CQDMModuleModel alloc] init];
             loginModule.title = @"传统一个个多次操作delegate";
             loginModule.actionBlock = ^{
                 OneToManyDelegateNormalViewController1 *viewController = [[OneToManyDelegateNormalViewController1 alloc] init];
@@ -72,7 +72,7 @@
             [sectionDataModel.values addObject:loginModule];
         }
         {
-            CJModuleModel *loginModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *loginModule = [[CQDMModuleModel alloc] init];
             loginModule.title = @"传统一个个多次操作delegate";
             loginModule.actionBlock = ^{
                 OneToManyDelegateNormalMediator21 *delegateMediator = [[OneToManyDelegateNormalMediator21 alloc] init];
@@ -91,10 +91,10 @@
     
     // 多代理-Delegate(Array)
     {
-        CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
         sectionDataModel.theme = @"Array遍历操作delegate";
         {
-            CJModuleModel *loginModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *loginModule = [[CQDMModuleModel alloc] init];
             loginModule.title = @"OneToManyDelegateArrayViewController1";
             loginModule.actionBlock = ^{
                 NSPointerArray *delegates = [NSPointerArray weakObjectsPointerArray];
@@ -108,7 +108,7 @@
             [sectionDataModel.values addObject:loginModule];
         }
         {
-            CJModuleModel *loginModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *loginModule = [[CQDMModuleModel alloc] init];
             loginModule.title = @"OneToManyDelegateArrayViewController31";
             loginModule.actionBlock = ^{
                 OneToManyDelegateArrayMediator31 *delegateMediator = [[OneToManyDelegateArrayMediator31 alloc] init];
@@ -122,7 +122,7 @@
             [sectionDataModel.values addObject:loginModule];
         }
         {
-            CJModuleModel *loginModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *loginModule = [[CQDMModuleModel alloc] init];
             loginModule.title = @"OneToManyDelegateArrayViewController33";
             loginModule.actionBlock = ^{
                 OneToManyDelegateArrayMediator33 *delegateMediator = [[OneToManyDelegateArrayMediator33 alloc] init];
@@ -142,10 +142,10 @@
     
     // 多代理-Delegate(Hash)
     {
-        CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
         sectionDataModel.theme = @"Hash遍历操作delegate";
         {
-            CJModuleModel *loginModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *loginModule = [[CQDMModuleModel alloc] init];
             loginModule.title = @"OneToManyDelegateHashViewController1";
             loginModule.actionBlock = ^{
                 NSHashTable *delegates = [NSHashTable weakObjectsHashTable];
@@ -159,7 +159,7 @@
             [sectionDataModel.values addObject:loginModule];
         }
         {
-            CJModuleModel *loginModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *loginModule = [[CQDMModuleModel alloc] init];
             loginModule.title = @"OneToManyDelegateHashViewController31";
             loginModule.actionBlock = ^{
                 OneToManyDelegateHashMediator31 *delegateMediator = [[OneToManyDelegateHashMediator31 alloc] init];
@@ -174,7 +174,7 @@
         }
         
         {
-            CJModuleModel *loginModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *loginModule = [[CQDMModuleModel alloc] init];
             loginModule.title = @"OneToManyDelegateHashViewController33";
             loginModule.actionBlock = ^{
                 OneToManyDelegateHashMediator33 *delegateMediator = [[OneToManyDelegateHashMediator33 alloc] init];
@@ -193,10 +193,10 @@
     
     // 多代理-Delegate
     {
-        CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
         sectionDataModel.theme = @"OneToManyDelegate";
         {
-            CJModuleModel *loginModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *loginModule = [[CQDMModuleModel alloc] init];
             loginModule.title = @"OneToManyDelegateViewController6";
             loginModule.actionBlock = ^{
                 OneToManyDelegateViewController6 *viewController = [[OneToManyDelegateViewController6 alloc] init];

@@ -1,42 +1,38 @@
 PODS:
-  - CJBaseUtil/CJDataUtil (0.5.1)
-  - CQDemoKit/BaseUtil (0.5.0)
-  - CQDemoKit/BaseVC (0.5.0):
-    - CQDemoKit/BaseVC/Base (= 0.5.0)
-    - CQDemoKit/BaseVC/Collection (= 0.5.0)
-    - CQDemoKit/BaseVC/ScrollView (= 0.5.0)
-    - CQDemoKit/BaseVC/TableView (= 0.5.0)
-    - CQDemoKit/BaseVC/TextView (= 0.5.0)
-  - CQDemoKit/BaseVC/Base (0.5.0):
+  - CQDemoKit/BaseUtil (0.5.10)
+  - CQDemoKit/BaseVC (0.5.10):
+    - CQDemoKit/BaseVC/Base (= 0.5.10)
+    - CQDemoKit/BaseVC/Collection (= 0.5.10)
+    - CQDemoKit/BaseVC/ScrollView (= 0.5.10)
+    - CQDemoKit/BaseVC/TabBar (= 0.5.10)
+    - CQDemoKit/BaseVC/TableView (= 0.5.10)
+    - CQDemoKit/BaseVC/TextView (= 0.5.10)
+  - CQDemoKit/BaseVC/Base (0.5.10):
     - Masonry
-  - CQDemoKit/BaseVC/Collection (0.5.0):
-    - CJBaseUtil/CJDataUtil
+  - CQDemoKit/BaseVC/Collection (0.5.10):
     - CQDemoKit/BaseVC/Base
-  - CQDemoKit/BaseVC/ScrollView (0.5.0):
+  - CQDemoKit/BaseVC/ScrollView (0.5.10):
     - CQDemoKit/BaseVC/Base
-  - CQDemoKit/BaseVC/TableView (0.5.0):
-    - CJBaseUtil/CJDataUtil
+  - CQDemoKit/BaseVC/TabBar (0.5.10)
+  - CQDemoKit/BaseVC/TableView (0.5.10):
     - CQDemoKit/BaseVC/Base
-  - CQDemoKit/BaseVC/TextView (0.5.0):
-    - CJBaseUtil/CJDataUtil
+  - CQDemoKit/BaseVC/TextView (0.5.10):
     - CQDemoKit/BaseUtil
     - CQDemoKit/BaseVC/Base
   - Masonry (1.1.0)
 
 DEPENDENCIES:
-  - CQDemoKit/BaseVC (~> 0.5.0)
+  - CQDemoKit/BaseVC (~> 0.5.10)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
-    - CJBaseUtil
     - CQDemoKit
     - Masonry
 
 SPEC CHECKSUMS:
-  CJBaseUtil: 1bbf8d5f831dc12ae4bb06c8b5326bd39f3522e1
-  CQDemoKit: 8ad326fdc285244a77a8210a31d3295b91e49877
+  CQDemoKit: a3385728b155ce80d8c5db57e06b8cfe1c3612e6
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
-PODFILE CHECKSUM: 812ce45d05d88e7c3b73e3ebefa0a8d6189d6c3d
+PODFILE CHECKSUM: 73012db60313b1f472a97dacc0cb1e04694c6f71
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.0

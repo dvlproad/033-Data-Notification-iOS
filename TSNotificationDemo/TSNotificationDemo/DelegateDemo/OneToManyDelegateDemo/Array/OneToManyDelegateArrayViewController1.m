@@ -25,10 +25,10 @@
     
     // 多代理-delegate
     {
-        CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
         sectionDataModel.theme = @"delegate1 & delegate2";
         {
-            CJModuleModel *loginModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *loginModule = [[CQDMModuleModel alloc] init];
             loginModule.title = @"delegate:执行登录操作，发送登录状态变化";
             loginModule.actionBlock = ^{
                 //[self.delegate1 delegate_didUpdateLoginState:YES];

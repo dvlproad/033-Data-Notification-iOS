@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -302,8 +302,8 @@
 			isa = PBXGroup;
 			children = (
 				781BAA2424CC810A002EB7FF /* DelegateInRealAppHomeViewController.h */,
-				781BAA2524CC810A002EB7FF /* User */,
 				781BAA2C24CC810A002EB7FF /* DelegateInRealAppHomeViewController.m */,
+				781BAA2524CC810A002EB7FF /* User */,
 			);
 			path = DelegateInRealAppDemo;
 			sourceTree = "<group>";
@@ -450,6 +450,7 @@
 				781BA9DF24CC7F39002EB7FF /* Sources */,
 				781BA9E024CC7F39002EB7FF /* Frameworks */,
 				781BA9E124CC7F39002EB7FF /* Resources */,
+				6F1BBC727A94676642875689 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -588,6 +589,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F1BBC727A94676642875689 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TSNotificationDemo/Pods-TSNotificationDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TSNotificationDemo/Pods-TSNotificationDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TSNotificationDemo/Pods-TSNotificationDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		95064C86DA69C2AEDABD395D /* [CP] Check Pods Manifest.lock */ = {

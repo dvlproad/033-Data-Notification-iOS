@@ -49,10 +49,10 @@
     
     // OneToManyDelegate
     {
-        CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
         sectionDataModel.theme = @"OneToManyDelegate";
         {
-            CJModuleModel *helperModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *helperModule = [[CQDMModuleModel alloc] init];
             helperModule.title = @"(发送者发)同一协议给多个监听者";
             helperModule.classEntry = [OneToManyDelegateHomeViewController class];
             [sectionDataModel.values addObject:helperModule];
@@ -63,10 +63,10 @@
     
     // ListenManyDelegate
     {
-        CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
         sectionDataModel.theme = @"ListenManyDelegate";
         {
-            CJModuleModel *helperModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *helperModule = [[CQDMModuleModel alloc] init];
             helperModule.title = @"(接收者收)不同协议给同一监听者/同时监听不同协议";
             helperModule.classEntry = [ListenManyDelegateHomeViewController class];
             [sectionDataModel.values addObject:helperModule];
@@ -77,10 +77,10 @@
     
     // Whole
     {
-        CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
         sectionDataModel.theme = @"Whole";
         {
-            CJModuleModel *helperModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *helperModule = [[CQDMModuleModel alloc] init];
             helperModule.title = @"完整的";
             helperModule.classEntry = [WholeDelegateHomeViewController class];
             [sectionDataModel.values addObject:helperModule];
@@ -91,10 +91,10 @@
     
     // 多代理在正式app中的使用示例
     {
-        CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
         sectionDataModel.theme = @"多代理在正式app中的使用示例";
         {
-            CJModuleModel *helperModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *helperModule = [[CQDMModuleModel alloc] init];
             helperModule.title = @"多代理在正式app中的使用示例";
             helperModule.classEntry = [DelegateInRealAppHomeViewController class];
             [sectionDataModel.values addObject:helperModule];
