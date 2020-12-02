@@ -1,4 +1,4 @@
-platform :ios, '8.0'
+platform :ios, '9.0'
 #use_frameworks!
 inhibit_all_warnings!
 # pod的本地索引文件：~/Library/Caches/CocoaPods/search_index.json
@@ -30,7 +30,7 @@ target 'TSNotificationDemo' do
   pod 'CQDemoKit',                  '~> 0.5.10',     :subspecs => ['BaseVC']
     
   #pod 'TSDemo_DatePicker',          :path => '../’
-  #pod 'CQDatePickerKit',            :path => '../’
+  pod 'CJProtocolCenter',           :path => '../’
 end
 
 target 'TSNotificationDemoTests' do

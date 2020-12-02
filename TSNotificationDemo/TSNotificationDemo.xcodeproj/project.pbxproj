@@ -17,7 +17,6 @@
 		781BAA0324CC7F3E002EB7FF /* TSNotificationDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA0224CC7F3E002EB7FF /* TSNotificationDemoTests.m */; };
 		781BAA0E24CC7F3E002EB7FF /* TSNotificationDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA0D24CC7F3E002EB7FF /* TSNotificationDemoUITests.m */; };
 		781BAA6824CC810A002EB7FF /* WholeDelegateHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA1D24CC810A002EB7FF /* WholeDelegateHomeViewController.m */; };
-		781BAA6924CC810A002EB7FF /* CJProtocolCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA2024CC810A002EB7FF /* CJProtocolCenter.m */; };
 		781BAA6A24CC810A002EB7FF /* TSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA2724CC810A002EB7FF /* TSUser.m */; };
 		781BAA6B24CC810A002EB7FF /* TSUserLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA2924CC810A002EB7FF /* TSUserLoginViewModel.m */; };
 		781BAA6C24CC810A002EB7FF /* TSUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA2B24CC810A002EB7FF /* TSUserManager.m */; };
@@ -93,8 +92,6 @@
 		781BAA0D24CC7F3E002EB7FF /* TSNotificationDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSNotificationDemoUITests.m; sourceTree = "<group>"; };
 		781BAA0F24CC7F3E002EB7FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		781BAA1D24CC810A002EB7FF /* WholeDelegateHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WholeDelegateHomeViewController.m; sourceTree = "<group>"; };
-		781BAA1F24CC810A002EB7FF /* CJProtocolCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJProtocolCenter.h; sourceTree = "<group>"; };
-		781BAA2024CC810A002EB7FF /* CJProtocolCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJProtocolCenter.m; sourceTree = "<group>"; };
 		781BAA2124CC810A002EB7FF /* WholeDelegateHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WholeDelegateHomeViewController.h; sourceTree = "<group>"; };
 		781BAA2224CC810A002EB7FF /* DelegateHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelegateHomeViewController.h; sourceTree = "<group>"; };
 		781BAA2424CC810A002EB7FF /* DelegateInRealAppHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelegateInRealAppHomeViewController.h; sourceTree = "<group>"; };
@@ -282,20 +279,10 @@
 		781BAA1C24CC810A002EB7FF /* WholeDelegateDemo */ = {
 			isa = PBXGroup;
 			children = (
-				781BAA1E24CC810A002EB7FF /* CJProtocolCenter */,
 				781BAA2124CC810A002EB7FF /* WholeDelegateHomeViewController.h */,
 				781BAA1D24CC810A002EB7FF /* WholeDelegateHomeViewController.m */,
 			);
 			path = WholeDelegateDemo;
-			sourceTree = "<group>";
-		};
-		781BAA1E24CC810A002EB7FF /* CJProtocolCenter */ = {
-			isa = PBXGroup;
-			children = (
-				781BAA1F24CC810A002EB7FF /* CJProtocolCenter.h */,
-				781BAA2024CC810A002EB7FF /* CJProtocolCenter.m */,
-			);
-			path = CJProtocolCenter;
 			sourceTree = "<group>";
 		};
 		781BAA2324CC810A002EB7FF /* DelegateInRealAppDemo */ = {
@@ -677,7 +664,6 @@
 				781BAA7E24CC810A002EB7FF /* TSNotificationCenter.m in Sources */,
 				781BAA7A24CC810A002EB7FF /* DelegateReceivedViewModel2.m in Sources */,
 				781BA9E824CC7F39002EB7FF /* AppDelegate.m in Sources */,
-				781BAA6924CC810A002EB7FF /* CJProtocolCenter.m in Sources */,
 				781BAA6D24CC810A002EB7FF /* DelegateInRealAppHomeViewController.m in Sources */,
 				781BAA7424CC810A002EB7FF /* OneToManyDelegateArrayMediator33.m in Sources */,
 				781BAA7D24CC810A002EB7FF /* OneToManyDelegateViewController6.m in Sources */,
