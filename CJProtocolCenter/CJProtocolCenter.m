@@ -39,6 +39,7 @@
     return self;
 }
 
+#pragma mark - 添加监听者
 /*
  添加监听者。如果监听者要求回调方法要异步执行，请在各自的回调方法中自行实现异步功能。
 
@@ -60,6 +61,30 @@
     }
 }
 
+#pragma mark - 发送广播
+/*
+ 发送广播，同步串行。让protocol的监听者们执行block方法（参数selector必须与block的方法相对应，用于在执行block前判断该protoco监听者是否能够执行该方法）
+
+ @param protocol    要发送的广播协议
+ @param selector    广播协议对应的 selector，会自动判断监听者是否实现 selector。selector 会自动为 block 参数过滤掉不响应的 listener，如果 selector 传入 nil，则 block 会被全量执行。
+ @param block       执行 selector 的 block
+ */
+- (void)broadcastProtocol:(Protocol * _Nonnull)protocol selector:(SEL _Nullable)selector responder:(void (^_Nonnull)(id _Nonnull listener))block {
+    NSAssert(protocol, @"Protocol is nil.");
+    NSAssert(block, @"Block is nil.");
+    
+    NSArray *table = nil;
+    @synchronized(protocol) {
+        table = [self __unsafe_listenersForProtocol:protocol autoCreate:NO].allObjects;
+    }
+    for (id listener in table) {
+        if (!selector || [listener respondsToSelector:selector]) {
+            block(listener);
+        }
+    }
+}
+
+#pragma mark - 移除监听者
 /*
  移除监听者，停止监听，
 
@@ -86,27 +111,44 @@
 }
 
 /*
- 发送广播，同步串行。让protocol的监听者们执行block方法（参数selector必须与block的方法相对应，用于在执行block前判断该protoco监听者是否能够执行该方法）
-
- @param protocol    要发送的广播协议
- @param selector    广播协议对应的 selector，会自动判断监听者是否实现 selector。selector 会自动为 block 参数过滤掉不响应的 listener，如果 selector 传入 nil，则 block 会被全量执行。
- @param block       执行 selector 的 block
+ *  删除所有监听者
+ *  @note   用于：有些视图控制器你因为循环引用的无法正常remove监听的时候，临时采用在退出登录的时候调用此方法
  */
-- (void)broadcastProtocol:(Protocol * _Nonnull)protocol selector:(SEL _Nullable)selector responder:(void (^_Nonnull)(id _Nonnull listener))block {
-    NSAssert(protocol, @"Protocol is nil.");
-    NSAssert(block, @"Block is nil.");
-    
-    NSArray *table = nil;
-    @synchronized(protocol) {
-        table = [self __unsafe_listenersForProtocol:protocol autoCreate:NO].allObjects;
+- (void)removeAllListener {
+    @synchronized(self) {
+        for (NSHashTable *table in self.listenerLists) {
+            for (id listener in table) {
+                [table removeObject:listener];
+            }
+        }
     }
-    for (id listener in table) {
-        if (!selector || [listener respondsToSelector:selector]) {
-            block(listener);
+}
+ 
+/*
+ *  删除所有监听protocol的监听者
+ *  @note   用于：有些视图控制器你因为循环引用的无法正常remove监听的时候，临时采用在退出登录的时候调用此方法
+ *
+ *  @param protocol     对象包含的监听广播协议
+ */
+- (void)removeAllListenerWhichConformsToProtocol:(Protocol * _Nonnull)protocol {
+    NSAssert(protocol, @"Protocol is nil.");
+    
+    @synchronized(protocol) {
+        
+        for (NSHashTable *table in self.listenerLists) {
+            NSMutableArray *shouldRemoveListeners = [[NSMutableArray alloc] init];
+            for (id listener in table) {
+                if ([listener conformsToProtocol:protocol]) {
+                    [shouldRemoveListeners addObject:listener];
+                }
+            }
+            [self __hashTable:table removeListeners:shouldRemoveListeners];
         }
     }
 }
 
+
+#pragma mark - Private Method
 static void *CJ_BROADCAST_PROTOCOL_LISTENER = &CJ_BROADCAST_PROTOCOL_LISTENER;
 - (NSHashTable *)__unsafe_listenersForProtocol:(Protocol *)protocol autoCreate:(BOOL)autoCreate {
     NSHashTable *array = objc_getAssociatedObject(protocol, CJ_BROADCAST_PROTOCOL_LISTENER);
@@ -118,6 +160,20 @@ static void *CJ_BROADCAST_PROTOCOL_LISTENER = &CJ_BROADCAST_PROTOCOL_LISTENER;
         objc_setAssociatedObject(protocol, CJ_BROADCAST_PROTOCOL_LISTENER, array, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     return array;
+}
+
+/*
+ *  从哈希表hashTable中删除指定数据
+ *
+ *  @param removeListeners 要删除的数据
+ */
+- (void)__hashTable:(NSHashTable *)hashTable removeListeners:(NSArray *)removeListeners {
+    //NSLog(@"删除前的table = %@", table);
+    for (id shouldRemoveListener in removeListeners) {
+        [hashTable removeObject:shouldRemoveListener];
+    }
+//    [hashTable removeObjectsInArray:shouldRemoveListeners]; // 不要使用removeObjectsInArray。因为NSHashTable无removeObjectsInArray方法
+    //NSLog(@"删除后的table = %@", table);
 }
 
 @end
