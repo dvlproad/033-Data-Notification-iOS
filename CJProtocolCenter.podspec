@@ -2,9 +2,9 @@ Pod::Spec.new do |s|
   #验证方法： pod lib lint CJProtocolCenter.podspec --allow-warnings --use-libraries --verbose
   #提交方法： pod trunk push CJProtocolCenter.podspec --allow-warnings --use-libraries --verbose
   s.name         = "CJProtocolCenter"
-  s.version      = "0.1.0"
+  s.version      = "0.1.1"
   s.summary      = "数据之通知(多代理模式发送数据)"
-  s.homepage     = "https://github.com/dvlproad/CJNetwork.git"
+  s.homepage     = "https://github.com/dvlproad/033-Data-Notification-iOS.git"
   s.license      = "MIT"
   s.author             = { "dvlproad" => "studyroad@qq.com" }
   # s.social_media_url   = "http://twitter.com/dvlproad"
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "9.0"
 
-  s.source       = { :git => "https://github.com/dvlproad/CJNetwork.git", :tag => "CJProtocolCenter_0.1.0" }
+  s.source       = { :git => "https://github.com/dvlproad/033-Data-Notification-iOS.git", :tag => "CJProtocolCenter_0.1.1" }
   # s.source_files  = "CJProtocolCenter/*.{h,m}"
   s.frameworks = 'UIKit'
 
