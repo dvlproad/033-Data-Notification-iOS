@@ -27,24 +27,36 @@
     return self;
 }
 
-- (void)login {
-    [[CJProtocolCenter defaultCenter] broadcastProtocol:@protocol(TSUserDelegate)
-                                                    selector:@selector(userDelegate_didUpdateLoginState:)
-                                                   responder:^(id<TSUserDelegate> listener) {
+- (void)loginSuccessWithMap:(NSDictionary *)dict {
+    [_serviceUser updateWithLoginSuccessDictionary:dict];
+    [CJProtocolCenter broadcastAllListenersWhichConformsToProtocol:@protocol(TSUserDelegate)
+                                                          selector:@selector(userDelegate_didUpdateLoginState:)
+                                                        execHandle:^(id<TSUserDelegate> listener) {
         [listener userDelegate_didUpdateLoginState:YES];
     }];
+    
+    // 要让调用者实现上述方法，则调用者必须在初始化的时候监听指定的协议
+    // [CJProtocolCenter addListener:调用者常为self forProtocol:@protocol(TSUserDelegate)];
+    // 销毁的时候记得移除
+    // [CJProtocolCenter removeListenerForAllProtocol:self];
 }
 
 - (void)logout {
-    [[CJProtocolCenter defaultCenter] broadcastProtocol:@protocol(TSUserDelegate)
-                                                    selector:@selector(userDelegate_didUpdateLoginState:)
-                                                   responder:^(id<TSUserDelegate> listener) {
+    _serviceUser = nil;
+    
+    [CJProtocolCenter broadcastAllListenersWhichConformsToProtocol:@protocol(TSUserDelegate)
+                                                          selector:@selector(userDelegate_didUpdateLoginState:)
+                                                        execHandle:^(id<TSUserDelegate> listener) {
         [listener userDelegate_didUpdateLoginState:NO];
     }];
+    // 要让调用者实现上述方法，则调用者必须在初始化的时候监听指定的协议
+    // [CJProtocolCenter addListener:调用者常为self forProtocol:@protocol(TSUserDelegate)];
+    // 销毁的时候记得移除
+    // [CJProtocolCenter removeListenerForAllProtocol:self];
 }
 
 - (void)dealloc {
-    [[CJProtocolCenter defaultCenter] removeListener:self forProtocol:nil];
+    [CJProtocolCenter removeListenerForAllProtocol:self];
  }
 
 @end

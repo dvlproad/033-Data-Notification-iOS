@@ -29,8 +29,14 @@ inhibit_all_warnings! #inhibit_warnings参数能够有效的抑制CocoaPods引�
 target 'TSNotificationDemo' do
   pod 'CQDemoKit',                  '~> 0.5.10',     :subspecs => ['BaseVC']
     
-  #pod 'TSDemo_DatePicker',          :path => '../’
-  pod 'CJProtocolCenter',           :path => '../’
+  #pod 'TSDemo_DatePicker',          :path => '../'
+  pod 'CJProtocolCenter',           :path => '../'
+  pod 'CQModuleHelper',             :path => '../'
+  pod 'CJProtocolCenter',           :path => '../'
+  pod 'TSModulePublic',             :path => '../',     :subspecs => ['LoginModulePublic', 'OrderModulePublic', 'CJUserServiceProtocolForModule']
+  pod 'TSLoginModuleImpl',          :path => '../'
+  pod 'TSOrderModuleImpl',          :path => '../'
+#  pod 'CQUserService_Login',        :source => 'https://gitee.com/dvlproad/dvlproadSpecs.git'
 end
 
 target 'TSNotificationDemoTests' do

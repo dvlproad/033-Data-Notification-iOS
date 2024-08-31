@@ -1,0 +1,34 @@
+{
+  "name": "TSModulePublic",
+  "version": "0.0.1",
+  "summary": "模块化的底层公共方法(含模块间通知和模块间跳转）",
+  "homepage": "https://github.com/dvlproad/033-Data-Notification-iOS.git",
+  "license": "MIT",
+  "authors": {
+    "dvlproad": "studyroad@qq.com"
+  },
+  "description": "- TSModulePublic：测试模块化\n\n A longer description of TSModulePublic in Markdown format.\n\n * Think: Why did you write this? What is the focus? What does it do?\n * CocoaPods will be using this to generate tags, and improve search results.\n * Try to keep it short, snappy and to the point.\n * Finally, don't worry about the indent, CocoaPods strips it!",
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source": {
+    "git": "https://github.com/dvlproad/033-Data-Notification-iOS.git",
+    "tag": "TSModulePublic_0.0.1"
+  },
+  "frameworks": "UIKit",
+  "requires_arc": true,
+  "subspecs": [
+    {
+      "name": "CJUserServiceProtocolForModule",
+      "source_files": "TSModulePublic/CJUserServiceProtocolForModule.{h,m}"
+    },
+    {
+      "name": "LoginModulePublic",
+      "source_files": "TSModulePublic/LoginModulePublic.{h,m}"
+    },
+    {
+      "name": "OrderModulePublic",
+      "source_files": "TSModulePublic/OrderModulePublic.{h,m}"
+    }
+  ]
+}

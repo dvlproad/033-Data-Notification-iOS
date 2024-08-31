@@ -1,0 +1,32 @@
+{
+  "name": "TSOrderModuleImpl",
+  "version": "0.0.1",
+  "summary": "模块化的实现层",
+  "homepage": "https://github.com/dvlproad/033-Data-Notification-iOS.git",
+  "license": "MIT",
+  "authors": {
+    "dvlproad": "studyroad@qq.com"
+  },
+  "description": "- TSOrderModuleImpl：模块化的实现层\n\n A longer description of TSOrderModuleImpl in Markdown format.\n\n * Think: Why did you write this? What is the focus? What does it do?\n * CocoaPods will be using this to generate tags, and improve search results.\n * Try to keep it short, snappy and to the point.\n * Finally, don't worry about the indent, CocoaPods strips it!",
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source": {
+    "git": "https://github.com/dvlproad/033-Data-Notification-iOS.git",
+    "tag": "TSOrderModuleImpl_0.0.1"
+  },
+  "frameworks": "UIKit",
+  "requires_arc": true,
+  "source_files": "TSOrderModuleImpl/**/*.{h,m}",
+  "dependencies": {
+    "TSModulePublic/OrderModulePublic": [
+
+    ],
+    "CJProtocolCenter": [
+
+    ],
+    "CJBaseHelper/UIViewControllerCJHelper": [
+
+    ]
+  }
+}

@@ -1,5 +1,6 @@
 PODS:
-  - CJProtocolCenter (0.1.0)
+  - CJBaseHelper/UIViewControllerCJHelper (0.1.7)
+  - CJProtocolCenter (0.1.1)
   - CQDemoKit/BaseUtil (0.5.10)
   - CQDemoKit/BaseVC (0.5.10):
     - CQDemoKit/BaseVC/Base (= 0.5.10)
@@ -20,26 +21,62 @@ PODS:
   - CQDemoKit/BaseVC/TextView (0.5.10):
     - CQDemoKit/BaseUtil
     - CQDemoKit/BaseVC/Base
+  - CQModuleHelper (0.0.1):
+    - CJProtocolCenter
+    - TSModulePublic/CJUserServiceProtocolForModule
+    - TSModulePublic/LoginModulePublic
+    - TSModulePublic/OrderModulePublic
   - Masonry (1.1.0)
+  - TSLoginModuleImpl (0.0.1):
+    - CJBaseHelper/UIViewControllerCJHelper
+    - CJProtocolCenter
+    - TSModulePublic/LoginModulePublic
+  - TSModulePublic/CJUserServiceProtocolForModule (0.0.1)
+  - TSModulePublic/LoginModulePublic (0.0.1)
+  - TSModulePublic/OrderModulePublic (0.0.1)
+  - TSOrderModuleImpl (0.0.1):
+    - CJBaseHelper/UIViewControllerCJHelper
+    - CJProtocolCenter
+    - TSModulePublic/OrderModulePublic
 
 DEPENDENCIES:
   - CJProtocolCenter (from `../`)
   - CQDemoKit/BaseVC (~> 0.5.10)
+  - CQModuleHelper (from `../`)
+  - TSLoginModuleImpl (from `../`)
+  - TSModulePublic/CJUserServiceProtocolForModule (from `../`)
+  - TSModulePublic/LoginModulePublic (from `../`)
+  - TSModulePublic/OrderModulePublic (from `../`)
+  - TSOrderModuleImpl (from `../`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - CJBaseHelper
     - CQDemoKit
     - Masonry
 
 EXTERNAL SOURCES:
   CJProtocolCenter:
     :path: "../"
+  CQModuleHelper:
+    :path: "../"
+  TSLoginModuleImpl:
+    :path: "../"
+  TSModulePublic:
+    :path: "../"
+  TSOrderModuleImpl:
+    :path: "../"
 
 SPEC CHECKSUMS:
-  CJProtocolCenter: e0dd58d9de6431bfe66909ea26441292bb95f7c9
+  CJBaseHelper: 71c9d695c76736b2fc66123157d5626da4556177
+  CJProtocolCenter: 9f2f3d67b39b83adb1a471aad230f8cd47bf1c93
   CQDemoKit: a3385728b155ce80d8c5db57e06b8cfe1c3612e6
+  CQModuleHelper: 4a8ad4ee7e4f84e0c8e3d850d38b8e9b29a068dc
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  TSLoginModuleImpl: d7021c921e454244b35c75e25521e28b2de36522
+  TSModulePublic: 16ee518c9cee72e8304ff4172276466bc1c9ef1d
+  TSOrderModuleImpl: 0d582d4fa5ced2ea4bc5bce2aa8fa39358f980cc
 
-PODFILE CHECKSUM: 9ec92f9456c8416e611cfeb787a472eed6dedd4e
+PODFILE CHECKSUM: b762983a511e259fbc4b0c42753330d762cde9dd
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.12.1

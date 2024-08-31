@@ -20,4 +20,13 @@
     return self;
 }
 
+// 避免登录接口比已拥有的数据少，而造成覆盖丢失
+- (void)updateWithLoginSuccessDictionary:(NSDictionary *)userDictionary {
+    _uid = userDictionary[@"uid"];
+    
+    //[self __updateServiceUser:userDictionary forKeys:nil keyMap:nil];
+}
+ 
+
+
 @end

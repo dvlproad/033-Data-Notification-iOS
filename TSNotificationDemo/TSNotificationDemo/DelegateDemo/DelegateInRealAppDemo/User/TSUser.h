@@ -23,4 +23,7 @@
 
 - (instancetype)initWithUserDictionary:(NSDictionary *)userDictionary;
 
+// 避免登录接口比已拥有的数据少，而造成覆盖丢失
+- (void)updateWithLoginSuccessDictionary:(NSDictionary *)userDictionary;
+
 @end

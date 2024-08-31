@@ -14,7 +14,7 @@
 #import "DelegateInRealAppHomeViewController.h"
 
 #import "TSUserLoginViewModel.h"
-#import "TSUserManager.h"
+#import "TSUserDelegate.h"
 
 @interface DelegateHomeViewController () <TSDelegate, TSUserDelegate> {
     

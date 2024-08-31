@@ -32,8 +32,6 @@
             CQDMModuleModel *loginModule = [[CQDMModuleModel alloc] init];
             loginModule.title = @"manger执行登录操作，发送登录状态变化";
             loginModule.actionBlock = ^{
-                //NSDictionary *userDictionary = @{@"uid": @"111"};
-                //[[TSUserManager sharedInstance] __updateServiceUser:userDictionary forKeys:nil keyMap:nil];
                 [[TSUserManager sharedInstance] login];
             };
             [sectionDataModel.values addObject:loginModule];
@@ -42,8 +40,6 @@
             CQDMModuleModel *loginModule = [[CQDMModuleModel alloc] init];
             loginModule.title = @"manager执行退出操作，发送登录状态变化";
             loginModule.actionBlock = ^{
-                //NSDictionary *userDictionary = nil;
-                //[[TSUserManager sharedInstance] __updateServiceUser:userDictionary forKeys:nil keyMap:nil];
                 [[TSUserManager sharedInstance] logout];
             };
             [sectionDataModel.values addObject:loginModule];

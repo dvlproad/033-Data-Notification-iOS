@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -47,6 +47,7 @@
 		781BAA8524CC810A002EB7FF /* DiffDelegateReceivedViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA6124CC810A002EB7FF /* DiffDelegateReceivedViewModel.m */; };
 		781BAA8624CC810A002EB7FF /* ListenManyDelegateViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA6724CC810A002EB7FF /* ListenManyDelegateViewController2.m */; };
 		781BAA8924CC8135002EB7FF /* UIWindow+RootSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA8824CC8135002EB7FF /* UIWindow+RootSetting.m */; };
+		97E487042C81E682009240A8 /* TSNotificationMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E487032C81E682009240A8 /* TSNotificationMainViewController.m */; };
 		B080339F84AEF1A22F3CFF8D /* libPods-TSNotificationDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F9FF619556388F77B8C34A6 /* libPods-TSNotificationDemo.a */; };
 		DFE86946ADC4605043616658 /* libPods-TSNotificationDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEA2B710A26D676946DCC6F /* libPods-TSNotificationDemoTests.a */; };
 		F6E1743D5FB340A5AD749BDA /* libPods-TSNotificationDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81735D053D9392DB27F31ED7 /* libPods-TSNotificationDemoUITests.a */; };
@@ -159,6 +160,8 @@
 		81735D053D9392DB27F31ED7 /* libPods-TSNotificationDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TSNotificationDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EEA2B710A26D676946DCC6F /* libPods-TSNotificationDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TSNotificationDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90162924BB5290C2C1E73FC4 /* Pods-TSNotificationDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TSNotificationDemo.release.xcconfig"; path = "Target Support Files/Pods-TSNotificationDemo/Pods-TSNotificationDemo.release.xcconfig"; sourceTree = "<group>"; };
+		97E487022C81E682009240A8 /* TSNotificationMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSNotificationMainViewController.h; sourceTree = "<group>"; };
+		97E487032C81E682009240A8 /* TSNotificationMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSNotificationMainViewController.m; sourceTree = "<group>"; };
 		B741BBF6F028CF40D7CB00EA /* Pods-TSNotificationDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TSNotificationDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-TSNotificationDemoUITests/Pods-TSNotificationDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CA1F60303990870EB835FABE /* Pods-TSNotificationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TSNotificationDemo.debug.xcconfig"; path = "Target Support Files/Pods-TSNotificationDemo/Pods-TSNotificationDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D90794634226BF4A18BE236E /* Pods-TSNotificationDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TSNotificationDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-TSNotificationDemoTests/Pods-TSNotificationDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -233,6 +236,8 @@
 				781BA9EA24CC7F39002EB7FF /* SceneDelegate.m */,
 				781BAA8724CC8135002EB7FF /* UIWindow+RootSetting.h */,
 				781BAA8824CC8135002EB7FF /* UIWindow+RootSetting.m */,
+				97E487022C81E682009240A8 /* TSNotificationMainViewController.h */,
+				97E487032C81E682009240A8 /* TSNotificationMainViewController.m */,
 				781BAA1B24CC810A002EB7FF /* DelegateDemo */,
 				781BA9EC24CC7F39002EB7FF /* ViewController.h */,
 				781BA9ED24CC7F39002EB7FF /* ViewController.m */,
@@ -298,11 +303,11 @@
 		781BAA2524CC810A002EB7FF /* User */ = {
 			isa = PBXGroup;
 			children = (
-				781BAA2624CC810A002EB7FF /* TSUserLoginViewModel.h */,
-				781BAA2724CC810A002EB7FF /* TSUser.m */,
-				781BAA2824CC810A002EB7FF /* TSUserManager.h */,
-				781BAA2924CC810A002EB7FF /* TSUserLoginViewModel.m */,
 				781BAA2A24CC810A002EB7FF /* TSUser.h */,
+				781BAA2724CC810A002EB7FF /* TSUser.m */,
+				781BAA2624CC810A002EB7FF /* TSUserLoginViewModel.h */,
+				781BAA2924CC810A002EB7FF /* TSUserLoginViewModel.m */,
+				781BAA2824CC810A002EB7FF /* TSUserManager.h */,
 				781BAA2B24CC810A002EB7FF /* TSUserManager.m */,
 			);
 			path = User;
@@ -649,6 +654,7 @@
 				781BA9EE24CC7F39002EB7FF /* ViewController.m in Sources */,
 				781BAA8524CC810A002EB7FF /* DiffDelegateReceivedViewModel.m in Sources */,
 				781BAA6E24CC810A002EB7FF /* OneToManyDelegateHashMediator31.m in Sources */,
+				97E487042C81E682009240A8 /* TSNotificationMainViewController.m in Sources */,
 				781BAA8424CC810A002EB7FF /* ListenManyDelegateHomeViewController.m in Sources */,
 				781BAA7224CC810A002EB7FF /* OneToManyDelegateHashViewController1.m in Sources */,
 				781BAA7924CC810A002EB7FF /* OneToManyDelegateArrayViewController32.m in Sources */,

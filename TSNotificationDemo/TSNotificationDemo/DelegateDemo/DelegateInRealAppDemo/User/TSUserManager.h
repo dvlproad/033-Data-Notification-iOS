@@ -11,7 +11,7 @@
 #import <Foundation/Foundation.h>
 #import "TSUser.h"
 
-#import "CJProtocolCenter.h"
+#import <CJProtocolCenter/CJProtocolCenter+Module.h>
 #import "TSUserDelegate.h"
 
 @interface TSUserManager : NSObject <UIApplicationDelegate> {
