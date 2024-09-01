@@ -42,14 +42,21 @@
 
 
 
-#pragma mark - 移除监听者
+#pragma mark - 停止/移除监听者
 /*
- 移除监听者，停止监听，
+ 让监听者停止对指定协议的监听
+
+ @param listener    要操作的监听者
+ @param protocol    要停止监听的广播协议
+ */
+- (void)removeListener:(id _Nonnull)listener forProtocol:(Protocol * _Nonnull)protocol;
+
+/*
+ 移除指定的监听者，使其不再监听
 
  @param listener    要移除的监听者
- @param protocol    要停止监听的广播协议，传入 nil 则表示移除这个监听者的所有监听。
  */
-- (void)removeListener:(id _Nonnull)listener forProtocol:(Protocol * _Nullable)protocol;
+- (void)removeListenerForAllProtocol:(id _Nonnull)listener;
 
 /*
  *  删除所有监听者

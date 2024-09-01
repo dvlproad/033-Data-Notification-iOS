@@ -11,7 +11,7 @@
 
 @interface CJProtocolCenter ()
 
-@property (nonatomic, strong, readonly) NSMutableSet *listenerLists;
+@property (nonatomic, strong, readonly) NSMutableSet<NSHashTable *> *listenerLists; // 保存多个NSHashTable，可以理解为数组的数组，里面的元素是 NSHashTable *listeners
 
 @end
 
@@ -54,9 +54,9 @@
 #endif
     
     @synchronized(protocol) {
-        NSHashTable *table = [self __unsafe_listenersForProtocol:protocol autoCreate:YES];
-        if (![table containsObject:listener]) {
-            [table addObject:listener];
+        NSHashTable *listeners = [self __unsafe_listenersForProtocol:protocol autoCreate:YES];
+        if (![listeners containsObject:listener]) {
+            [listeners addObject:listener];
         }
     }
 }
@@ -84,27 +84,35 @@
     }
 }
 
-#pragma mark - 移除监听者
+#pragma mark - 停止/移除监听者
 /*
- 移除监听者，停止监听，
+ 让监听者停止对指定协议的监听
 
- @param listener    要移除的监听者
- @param protocol    要停止监听的广播协议，传入 nil 则表示移除这个监听者的所有监听。
+ @param listener    要操作的监听者
+ @param protocol    要停止监听的广播协议
  */
-- (void)removeListener:(id _Nonnull)listener forProtocol:(Protocol * _Nullable)protocol {
+- (void)removeListener:(id _Nonnull)listener forProtocol:(Protocol * _Nonnull)protocol {
     NSAssert(listener, @"listener is nil");
+    NSAssert(protocol, @"Protocol is nil.");
     
     @synchronized(protocol) {
-        if (protocol) {
-            NSHashTable *table = [self __unsafe_listenersForProtocol:protocol autoCreate:NO];
-            if ([table containsObject:listener]) {
+        NSHashTable *listeners = [self __unsafe_listenersForProtocol:protocol autoCreate:NO]; // 找到之前绑定到这个protocal上的监听者列表
+        if (listeners && [listeners containsObject:listener]) {
+            [listeners removeObject:listener];
+        }
+    }
+}
+
+/*
+ 移除指定的监听者，使其不再监听
+
+ @param listener    要移除的监听者
+ */
+- (void)removeListenerForAllProtocol:(id _Nonnull)listener {
+    @synchronized(self) {
+        for (NSHashTable *table in self.listenerLists) {
+            if (table && [table containsObject:listener]) {
                 [table removeObject:listener];
-            }
-        } else {
-            for (NSMutableArray *table in self.listenerLists) {
-                if ([table containsObject:listener]) {
-                    [table removeObject:listener];
-                }
             }
         }
     }
@@ -134,15 +142,15 @@
     NSAssert(protocol, @"Protocol is nil.");
     
     @synchronized(protocol) {
-        
-        for (NSHashTable *table in self.listenerLists) {
-            NSMutableArray *shouldRemoveListeners = [[NSMutableArray alloc] init];
-            for (id listener in table) {
+        for (NSHashTable *listeners in self.listenerLists) {
+            //NSMutableArray *shouldRemoveListeners = [[NSMutableArray alloc] init];
+            NSHashTable *shouldRemoveListeners = [NSHashTable hashTableWithOptions:NSPointerFunctionsWeakMemory]; // 为了和
+            for (id listener in listeners) {
                 if ([listener conformsToProtocol:protocol]) {
                     [shouldRemoveListeners addObject:listener];
                 }
             }
-            [self __hashTable:table removeListeners:shouldRemoveListeners];
+            [self __hashTable:listeners removeListeners:shouldRemoveListeners];
         }
     }
 }
@@ -150,16 +158,17 @@
 
 #pragma mark - Private Method
 static void *CJ_BROADCAST_PROTOCOL_LISTENER = &CJ_BROADCAST_PROTOCOL_LISTENER;
+// 找到之前绑定到这个protocal上的监听者列表
 - (NSHashTable *)__unsafe_listenersForProtocol:(Protocol *)protocol autoCreate:(BOOL)autoCreate {
-    NSHashTable *array = objc_getAssociatedObject(protocol, CJ_BROADCAST_PROTOCOL_LISTENER);
-    if (!array && autoCreate) {
-        array = [NSHashTable hashTableWithOptions:NSPointerFunctionsWeakMemory];
+    NSHashTable *listeners = objc_getAssociatedObject(protocol, CJ_BROADCAST_PROTOCOL_LISTENER); // 找到之前绑定到这个protocal上的监听者列表。好处：查找的时候可直接得到结果
+    if (!listeners && autoCreate) { // 如果这个protocal还还没监听者，且允许创建，则创建一个监听者列表，用于等下返回添加监听者
+        listeners = [NSHashTable hashTableWithOptions:NSPointerFunctionsWeakMemory];
         @synchronized (self.listenerLists) {
-            [self.listenerLists addObject:array];
+            [self.listenerLists addObject:listeners];
         }
-        objc_setAssociatedObject(protocol, CJ_BROADCAST_PROTOCOL_LISTENER, array, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        objc_setAssociatedObject(protocol, CJ_BROADCAST_PROTOCOL_LISTENER, listeners, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
-    return array;
+    return listeners;
 }
 
 /*
@@ -167,7 +176,7 @@ static void *CJ_BROADCAST_PROTOCOL_LISTENER = &CJ_BROADCAST_PROTOCOL_LISTENER;
  *
  *  @param removeListeners 要删除的数据
  */
-- (void)__hashTable:(NSHashTable *)hashTable removeListeners:(NSArray *)removeListeners {
+- (void)__hashTable:(NSHashTable *)hashTable removeListeners:(NSHashTable *)removeListeners {
     //NSLog(@"删除前的table = %@", table);
     for (id shouldRemoveListener in removeListeners) {
         [hashTable removeObject:shouldRemoveListener];

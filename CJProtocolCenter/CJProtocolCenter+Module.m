@@ -64,12 +64,12 @@
 }
 
 /*
- 移除这个监听者的所有监听
+ 移除指定的监听者，使其不再监听
 
  @param listener    要移除的监听者
  */
 + (void)removeListenerForAllProtocol:(id _Nonnull)listener {
-    [[CJProtocolCenter defaultCenter] removeListener:listener forProtocol:nil];
+    [[CJProtocolCenter defaultCenter] removeListenerForAllProtocol:listener];
 }
 
 /*
