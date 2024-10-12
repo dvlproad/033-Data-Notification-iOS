@@ -1,17 +1,17 @@
 Pod::Spec.new do |s|
-  #验证方法： pod lib lint CQModuleHelper.podspec --allow-warnings --use-libraries --verbose
-  #提交方法： pod trunk push CQModuleHelper.podspec --allow-warnings --use-libraries --verbose
-  s.name         = "CQModuleHelper"
+  #验证方法： pod lib lint TSUserServiceImpl.podspec --allow-warnings --use-libraries --verbose
+  #提交方法： pod trunk push TSUserServiceImpl.podspec --allow-warnings --use-libraries --verbose
+  s.name         = "TSUserServiceImpl"
   s.version      = "0.0.1"
-  s.summary      = "数据之通知(多代理模式发送数据)"
+  s.summary      = "模块化的实现层"
   s.homepage     = "https://github.com/dvlproad/033-Data-Notification-iOS.git"
   s.license      = "MIT"
   s.author             = { "dvlproad" => "studyroad@qq.com" }
   # s.social_media_url   = "http://twitter.com/dvlproad"
   s.description  = <<-DESC
-                  - CQModuleHelper：数据之通知(多代理模式发送数据)
+                  - TSUserServiceImpl：模块化的实现层
 
-                   A longer description of CQModuleHelper in Markdown format.
+                   A longer description of TSUserServiceImpl in Markdown format.
 
                    * Think: Why did you write this? What is the focus? What does it do?
                    * CocoaPods will be using this to generate tags, and improve search results.
@@ -21,8 +21,8 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "9.0"
 
-  s.source       = { :git => "https://github.com/dvlproad/033-Data-Notification-iOS.git", :tag => "CQModuleHelper_0.0.1" }
-  # s.source_files  = "CQModuleHelper/*.{h,m}"
+  s.source       = { :git => "https://github.com/dvlproad/033-Data-Notification-iOS.git", :tag => "TSUserServiceImpl_0.0.1" }
+  # s.source_files  = "TSUserServiceImpl/*.{h,m}"
   s.frameworks = 'UIKit'
 
   # s.library   = "iconv"
@@ -34,10 +34,9 @@ Pod::Spec.new do |s|
   # s.dependency "JSONKit", "~> 1.4"
 
 
-  s.source_files = "CQModuleHelper/**/*.{h,m}"
-  s.dependency 'CJProtocolCenter'
+  s.source_files = "TSUserServiceImpl/**/*.{h,m}"
   s.dependency 'TSModulePublic/CJUserServicePublic'
-  s.dependency 'TSModulePublic/LoginModulePublic'
-  s.dependency 'TSModulePublic/OrderModulePublic'
-
+  s.dependency 'CJProtocolCenter'
+  #s.dependency 'CJBaseHelper/UIViewControllerCJHelper'  # 为了获取 topVC
+  
 end

@@ -8,24 +8,18 @@
 
 #import "CQModuleHelper.h"
 #import <CJProtocolCenter/CJProtocolCenter+Module.h>
-#import <TSModulePublic/CJUserServiceProtocolForModule.h>
+#import <TSModulePublic/CJUserServicePublic.h>
 #import <TSModulePublic/LoginModulePublic.h>
 #import <TSModulePublic/OrderModulePublic.h>
 
 @implementation CQModuleHelper
 
-#pragma mark - 通知
-+ (void)noti_didUpdateLoginState:(BOOL)loginState {
-    // 1、登录成功后，其他页面登录状态更新(一般用在Service管理层，如用户管理层发现用户登录状态变化,监听者一般为xxxViewController）
-    [CJProtocolCenter broadcastAllListenersWhichConformsToProtocol:@protocol(CJUserServiceProtocolForModule)
-                                                          selector:@selector(userDelegate_didUpdateLoginState:)
-                                                        execHandle:^(id<CJUserServiceProtocolForModule> listener) {
-        [listener userDelegate_didUpdateLoginState:YES];
+#pragma mark - 管理数据变化+内部通知
++ (void)loginSuccessWithMap:(NSDictionary *)dict {
+    // 1、登录成功后，更新数据到用户数据Service管理类中，并在用户数据管理类中根据数据变化进行其他相应的通知其他页面登录状态更新
+    [CJProtocolCenter broadcastOtherModuleWhichConformsToProtocol:@protocol(CJUserServiceProtocol) selector:@selector(loginSuccessWithMap:) execHandle:^(id<CJUserServiceProtocol>  _Nonnull listener) {
+        [listener loginSuccessWithMap:dict];
     }];
-    // 要让调用者实现上述方法，则调用者必须在初始化的时候监听指定的协议
-    // [CJProtocolCenter addListener:self forProtocol:@protocol(CJUserServiceProtocolForModule)];
-    // 销毁的时候记得移除，因为会被通知执行此方法的基本为xxxViewController
-    // [CJProtocolCenter removeListenerForAllProtocol:self];
 }
 
 #pragma mark - 跳转

@@ -8,11 +8,11 @@
 
 #import "TSOrderHomeViewController.h"
 #import <CQModuleHelper/CQModuleHelper.h>
-#import <TSModulePublic/CJUserServiceProtocolForModule.h>
+#import <TSModulePublic/CJUserServicePublic.h>
 #import <TSModulePublic/LoginModulePublic.h>
 #import <CJProtocolCenter/CJProtocolCenter+Module.h>
 
-@interface TSOrderHomeViewController ()<CJUserServiceProtocolForModule>
+@interface TSOrderHomeViewController ()<CJModuleNotificationForUser>
 
 @end
 
@@ -25,7 +25,7 @@
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        [CJProtocolCenter addListener:self forProtocol:@protocol(CJUserServiceProtocolForModule)];
+        [CJProtocolCenter addListener:self forProtocol:@protocol(CJModuleNotificationForUser)];
     }
     return self;
 }

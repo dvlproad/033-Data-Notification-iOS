@@ -33,9 +33,10 @@ target 'TSNotificationDemo' do
   pod 'CJProtocolCenter',           :path => '../'
   pod 'CQModuleHelper',             :path => '../'
   pod 'CJProtocolCenter',           :path => '../'
-  pod 'TSModulePublic',             :path => '../',     :subspecs => ['LoginModulePublic', 'OrderModulePublic', 'CJUserServiceProtocolForModule']
-  pod 'TSLoginModuleImpl',          :path => '../'
-  pod 'TSOrderModuleImpl',          :path => '../'
+  pod 'TSModulePublic',             :path => '../',     :subspecs => ['CJUserServicePublic', 'LoginModulePublic', 'OrderModulePublic']
+  pod 'TSUserServiceImpl',          :path => '../'    # 用户数据管理模块
+  pod 'TSLoginModuleImpl',          :path => '../'    # 登录模块
+  pod 'TSOrderModuleImpl',          :path => '../'    # 订单模块
 #  pod 'CQUserService_Login',        :source => 'https://gitee.com/dvlproad/dvlproadSpecs.git'
 end
 

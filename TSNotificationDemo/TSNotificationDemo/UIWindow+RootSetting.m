@@ -10,6 +10,7 @@
 #import "TSNotificationMainViewController.h"
 //#import <TSModulePublic/LoginModulePublic.h>
 //#import <TSModulePublic/OrderModulePublic.h>
+#import <TSUserServiceImpl/TSUserServiceImpl.h>
 #import <TSLoginModuleImpl/TSLoginModuleImpl.h>
 #import <TSOrderModuleImpl/TSOrderModuleImpl.h>
 
@@ -28,6 +29,7 @@
 }
 
 - (void)addModules {
+    [TSUserServiceImpl sharedInstance];
     [TSLoginModuleImpl create];
     [TSOrderModuleImpl create];
 }

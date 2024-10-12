@@ -38,8 +38,8 @@ Pod::Spec.new do |s|
 
 
   # 模块间通知的协议
-  s.subspec 'CJUserServiceProtocolForModule' do |ss|
-    ss.source_files = "TSModulePublic/CJUserServiceProtocolForModule.{h,m}"
+  s.subspec 'CJUserServicePublic' do |ss|
+    ss.source_files = "TSModulePublic/CJUserServicePublic.{h,m}"
   end
 
 

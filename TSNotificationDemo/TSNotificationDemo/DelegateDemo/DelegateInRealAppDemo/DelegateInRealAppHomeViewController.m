@@ -8,7 +8,7 @@
 
 #import "DelegateInRealAppHomeViewController.h"
 
-#import "TSUserManager.h"
+#import <TSUserServiceImpl/TSUserServiceImpl.h>
 
 @interface DelegateInRealAppHomeViewController ()
 
@@ -32,7 +32,7 @@
             CQDMModuleModel *loginModule = [[CQDMModuleModel alloc] init];
             loginModule.title = @"manger执行登录操作，发送登录状态变化";
             loginModule.actionBlock = ^{
-                [[TSUserManager sharedInstance] login];
+                [[TSUserServiceImpl sharedInstance] loginSuccessWithMap:@{}];
             };
             [sectionDataModel.values addObject:loginModule];
         }
@@ -40,7 +40,7 @@
             CQDMModuleModel *loginModule = [[CQDMModuleModel alloc] init];
             loginModule.title = @"manager执行退出操作，发送登录状态变化";
             loginModule.actionBlock = ^{
-                [[TSUserManager sharedInstance] logout];
+                [[TSUserServiceImpl sharedInstance] logout];
             };
             [sectionDataModel.values addObject:loginModule];
         }

@@ -8,7 +8,7 @@
 
 #import "TSLoginViewController.h"
 #import <TSModulePublic/OrderModulePublic.h>                // 模块间
-#import <TSModulePublic/CJUserServiceProtocolForModule.h>   // Service信息管理层的协议
+#import <TSModulePublic/CJUserServicePublic.h>              // Service信息管理层的协议
 #import <CJProtocolCenter/CJProtocolCenter+Module.h>
 #import <CQModuleHelper/CQModuleHelper.h>
 
@@ -53,7 +53,8 @@
 /// 登录请求成功结束的数据处理方法
 - (void)__loginSuccess {
     // 1、登录成功后，其他页面登录状态更新(一般用在Service管理层，如用户管理层发现用户登录状态变化,监听者一般为xxxViewController）
-    [CQModuleHelper noti_didUpdateLoginState:YES];
+    [CQModuleHelper loginSuccessWithMap:@{@"uid": @"123123"}];
+    
     // 2、登录成功，跳转到其他模块的其他页面（一般用在要跳转到其他模块页面,监听者为xxxModuleImpl单例）
     [CQModuleHelper goOrderHomePage:2];
 }

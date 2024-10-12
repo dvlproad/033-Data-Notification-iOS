@@ -17,9 +17,7 @@
 		781BAA0324CC7F3E002EB7FF /* TSNotificationDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA0224CC7F3E002EB7FF /* TSNotificationDemoTests.m */; };
 		781BAA0E24CC7F3E002EB7FF /* TSNotificationDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA0D24CC7F3E002EB7FF /* TSNotificationDemoUITests.m */; };
 		781BAA6824CC810A002EB7FF /* WholeDelegateHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA1D24CC810A002EB7FF /* WholeDelegateHomeViewController.m */; };
-		781BAA6A24CC810A002EB7FF /* TSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA2724CC810A002EB7FF /* TSUser.m */; };
 		781BAA6B24CC810A002EB7FF /* TSUserLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA2924CC810A002EB7FF /* TSUserLoginViewModel.m */; };
-		781BAA6C24CC810A002EB7FF /* TSUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA2B24CC810A002EB7FF /* TSUserManager.m */; };
 		781BAA6D24CC810A002EB7FF /* DelegateInRealAppHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA2C24CC810A002EB7FF /* DelegateInRealAppHomeViewController.m */; };
 		781BAA6E24CC810A002EB7FF /* OneToManyDelegateHashMediator31.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA2F24CC810A002EB7FF /* OneToManyDelegateHashMediator31.m */; };
 		781BAA6F24CC810A002EB7FF /* OneToManyDelegateHashViewController31.m in Sources */ = {isa = PBXBuildFile; fileRef = 781BAA3224CC810A002EB7FF /* OneToManyDelegateHashViewController31.m */; };
@@ -97,11 +95,7 @@
 		781BAA2224CC810A002EB7FF /* DelegateHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelegateHomeViewController.h; sourceTree = "<group>"; };
 		781BAA2424CC810A002EB7FF /* DelegateInRealAppHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelegateInRealAppHomeViewController.h; sourceTree = "<group>"; };
 		781BAA2624CC810A002EB7FF /* TSUserLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSUserLoginViewModel.h; sourceTree = "<group>"; };
-		781BAA2724CC810A002EB7FF /* TSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSUser.m; sourceTree = "<group>"; };
-		781BAA2824CC810A002EB7FF /* TSUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSUserManager.h; sourceTree = "<group>"; };
 		781BAA2924CC810A002EB7FF /* TSUserLoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSUserLoginViewModel.m; sourceTree = "<group>"; };
-		781BAA2A24CC810A002EB7FF /* TSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSUser.h; sourceTree = "<group>"; };
-		781BAA2B24CC810A002EB7FF /* TSUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSUserManager.m; sourceTree = "<group>"; };
 		781BAA2C24CC810A002EB7FF /* DelegateInRealAppHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelegateInRealAppHomeViewController.m; sourceTree = "<group>"; };
 		781BAA2F24CC810A002EB7FF /* OneToManyDelegateHashMediator31.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneToManyDelegateHashMediator31.m; sourceTree = "<group>"; };
 		781BAA3024CC810A002EB7FF /* OneToManyDelegateHashMediator33.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneToManyDelegateHashMediator33.h; sourceTree = "<group>"; };
@@ -303,12 +297,8 @@
 		781BAA2524CC810A002EB7FF /* User */ = {
 			isa = PBXGroup;
 			children = (
-				781BAA2A24CC810A002EB7FF /* TSUser.h */,
-				781BAA2724CC810A002EB7FF /* TSUser.m */,
 				781BAA2624CC810A002EB7FF /* TSUserLoginViewModel.h */,
 				781BAA2924CC810A002EB7FF /* TSUserLoginViewModel.m */,
-				781BAA2824CC810A002EB7FF /* TSUserManager.h */,
-				781BAA2B24CC810A002EB7FF /* TSUserManager.m */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -666,7 +656,6 @@
 				781BAA7B24CC810A002EB7FF /* DelegateReceivedViewModel1.m in Sources */,
 				781BAA8924CC8135002EB7FF /* UIWindow+RootSetting.m in Sources */,
 				781BAA6824CC810A002EB7FF /* WholeDelegateHomeViewController.m in Sources */,
-				781BAA6C24CC810A002EB7FF /* TSUserManager.m in Sources */,
 				781BAA7E24CC810A002EB7FF /* TSNotificationCenter.m in Sources */,
 				781BAA7A24CC810A002EB7FF /* DelegateReceivedViewModel2.m in Sources */,
 				781BA9E824CC7F39002EB7FF /* AppDelegate.m in Sources */,
@@ -676,7 +665,6 @@
 				781BAA7624CC810A002EB7FF /* OneToManyDelegateArrayMediator31.m in Sources */,
 				781BAA8624CC810A002EB7FF /* ListenManyDelegateViewController2.m in Sources */,
 				781BAA6B24CC810A002EB7FF /* TSUserLoginViewModel.m in Sources */,
-				781BAA6A24CC810A002EB7FF /* TSUser.m in Sources */,
 				781BAA7F24CC810A002EB7FF /* OneToManyDelegateNormalViewController21.m in Sources */,
 				781BAA7724CC810A002EB7FF /* OneToManyDelegateArrayViewController31.m in Sources */,
 				781BAA7124CC810A002EB7FF /* OneToManyDelegateHashViewController33.m in Sources */,

@@ -19,8 +19,8 @@
   "requires_arc": true,
   "subspecs": [
     {
-      "name": "CJUserServiceProtocolForModule",
-      "source_files": "TSModulePublic/CJUserServiceProtocolForModule.{h,m}"
+      "name": "CJUserServicePublic",
+      "source_files": "TSModulePublic/CJUserServicePublic.{h,m}"
     },
     {
       "name": "LoginModulePublic",
